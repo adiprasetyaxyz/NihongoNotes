@@ -1,0 +1,683 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Latihan Soal N5</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1e642145-0d42-806f-a33f-ee5467da0268" class="page sans"><header><h1 class="page-title">Latihan Soal N5</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Course</th><td><span class="selected-value select-value-color-yellow">Latihan Soal</span></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesStatus"><path d="M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z"></path></svg></span>Status</th><td><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr></tbody></table></header><div class="page-body"><h1 id="1f142145-0d42-80bd-b068-d7d82c7aa967" class="">Soal Latihan JLPT N5 (Tanpa Jawaban)</h1><p id="1f142145-0d42-80ca-bbc4-f6078a10129c" class="">Berikut adalah 40 soal latihan JLPT N5 yang terdiri dari kosa kata, tata bahasa, membaca, dan mendengarkan. Soal-soal ini dibuat sebagai contoh berdasarkan pola JLPT N5. Untuk soal asli, silakan akses <a href="https://www.jlpt.jp/e/samples/sample09.html">JLPT Official</a>, <a href="https://jlptsensei.com/downloads/jlpt-n5-practice-test/">JLPT Sensei</a>, atau <a href="https://japanesetest4you.com/category/jlpt-n5/jlpt-n5-grammar-test/">Japanesetest4you.com</a>. Salin soal dari sumber tersebut untuk melengkapi file ini.</p><h2 id="1f142145-0d42-80bb-b484-c7c73737e00d" class="">Bagian 1: Kosa Kata (10 Soal)</h2><ol type="1" id="1f142145-0d42-8010-a013-c2c8d27024df" class="numbered-list" start="1"><li>Pilih kanji yang benar untuk &quot;buku&quot;.<p id="1f142145-0d42-80b2-9bff-f50848585b11" class="">a) 木</p><p id="1f142145-0d42-80f7-8afe-e7fd1d304a6b" class="">b) 本</p><p id="1f142145-0d42-80b1-ad5c-ea2c6b165560" class="">c) 火</p><p id="1f142145-0d42-808b-ad0c-ca981306647d" class="">d) 水</p></li></ol><ol type="1" id="1f142145-0d42-80e9-bfd7-dc7c36fb26a6" class="numbered-list" start="2"><li>Apa arti kata 学校?<p id="1f142145-0d42-802a-a0d5-cf6790e18e5a" class="">a) Rumah</p><p id="1f142145-0d42-80f9-a232-e199ae1ddf6a" class="">b) Sekolah</p><p id="1f142145-0d42-80da-a503-c0a91d3985e1" class="">c) Toko</p><p id="1f142145-0d42-809d-a2e9-e6f0b756ca31" class="">d) Taman</p></li></ol><ol type="1" id="1f142145-0d42-80ec-84eb-d6064d365dab" class="numbered-list" start="3"><li>Pilih kata yang benar untuk &quot;tangan&quot;.<p id="1f142145-0d42-807b-b6f6-dbcc30af6934" class="">a) 足</p><p id="1f142145-0d42-8087-b43c-f2a1dcfac401" class="">b) 手</p><p id="1f142145-0d42-80d6-8472-f6cde08470b0" class="">c) 目</p><p id="1f142145-0d42-80af-abc7-cf7754993561" class="">d) 口</p></li></ol><ol type="1" id="1f142145-0d42-8076-97c4-fc2eed82e63d" class="numbered-list" start="4"><li>Kata apa yang ditulis sebagai いす?<p id="1f142145-0d42-807b-ae25-d50820e1dfe0" class="">a) Meja</p><p id="1f142145-0d42-80db-bfc2-e4d29f6b77ff" class="">b) Kursi</p><p id="1f142145-0d42-80c7-9cc8-fd653b6bc8bf" class="">c) Jendela</p><p id="1f142145-0d42-8068-a365-ec3ec3855af5" class="">d) Pintu</p></li></ol><ol type="1" id="1f142145-0d42-801d-b69f-d4e343e7c95d" class="numbered-list" start="5"><li>Pilih kanji yang benar untuk &quot;gunung&quot;.<p id="1f142145-0d42-8004-b390-d64cedeed6d4" class="">a) 山</p><p id="1f142145-0d42-804e-a4f5-d9edf6701e9c" class="">b) 川</p><p id="1f142145-0d42-80ef-a5d4-f3c3469f0ace" class="">c) 田</p><p id="1f142145-0d42-8021-a848-d32f0dd9b796" class="">d) 木</p></li></ol><ol type="1" id="1f142145-0d42-8045-90f0-c8a874314109" class="numbered-list" start="6"><li>Apa arti kata 朝?<p id="1f142145-0d42-803a-bee4-fec66a861b0a" class="">a) Malam</p><p id="1f142145-0d42-802a-a2e6-d1dbd59c37a2" class="">b) Siang</p><p id="1f142145-0d42-804c-9fe0-f7792b46a347" class="">c) Pagi</p><p id="1f142145-0d42-8094-9d28-cfd7eac57077" class="">d) Sore</p></li></ol><ol type="1" id="1f142145-0d42-801e-881f-faa7c787db7a" class="numbered-list" start="7"><li>Pilih kata yang benar untuk ねこ.<p id="1f142145-0d42-80e9-979d-f7a62a144eaa" class="">a) Anjing</p><p id="1f142145-0d42-8058-9597-c08d215f2015" class="">b) Kucing</p><p id="1f142145-0d42-8022-b4c0-e0585867e2f7" class="">c) Burung</p><p id="1f142145-0d42-8051-ac4f-ee7aaabfd10c" class="">d) Ikan</p></li></ol><ol type="1" id="1f142145-0d42-801c-ba1c-c0438cd4ba25" class="numbered-list" start="8"><li>Kanji 口 berarti apa?<p id="1f142145-0d42-802a-9863-cb83d24b3534" class="">a) Mata</p><p id="1f142145-0d42-8054-b38c-dd1ea532737c" class="">b) Telinga</p><p id="1f142145-0d42-8024-b2ec-f5269136b5cc" class="">c) Mulut</p><p id="1f142145-0d42-80a6-9999-e67ca3a441e3" class="">d) Hidung</p></li></ol><ol type="1" id="1f142145-0d42-803d-96f0-c70497750afb" class="numbered-list" start="9"><li>Pilih kata yang ditulis sebagai みず.<p id="1f142145-0d42-8038-b47e-da9619e20992" class="">a) Air</p><p id="1f142145-0d42-801e-bc73-e90fc3d1f251" class="">b) Api</p><p id="1f142145-0d42-802a-8c82-c973ed2f16b7" class="">c) Angin</p><p id="1f142145-0d42-80c6-a477-fed3eab43af2" class="">d) Tanah</p></li></ol><ol type="1" id="1f142145-0d42-80d6-8ef9-df784e2c9df9" class="numbered-list" start="10"><li>Apa arti kanji 日?<p id="1f142145-0d42-808a-b021-cff7a751ee6e" class="">a) Bulan</p><p id="1f142145-0d42-80c1-b5c4-d5c1e8d167fd" class="">b) Matahari</p><p id="1f142145-0d42-80e4-b710-ea66b0f6d9e3" class="">c) Bintang</p><p id="1f142145-0d42-8077-a020-e805a0a57d74" class="">d) Awan</p></li></ol><h2 id="1f142145-0d42-8030-8ffc-ddd0eb8e2ddc" class="">Bagian 2: Tata Bahasa (15 Soal)</h2><ol type="1" id="1f142145-0d42-8067-b9e9-ea6429d28ec7" class="numbered-list" start="1"><li>Lengkapi kalimat: わたし___日本人です。<p id="1f142145-0d42-8018-becf-c4449e2fdc6d" class="">a) に</p><p id="1f142145-0d42-8023-9fa8-ef86080aef88" class="">b) は</p><p id="1f142145-0d42-8018-bb41-e425fa3455da" class="">c) を</p><p id="1f142145-0d42-80e1-a21e-ea1abd1c4bfc" class="">d) で</p></li></ol><ol type="1" id="1f142145-0d42-80de-a4cd-e2777c1d0180" class="numbered-list" start="2"><li>Pilih bentuk tata bahasa yang benar: 毎日、図書館___本を借ります。<p id="1f142145-0d42-80bc-af9f-e50c1bc81941" class="">a) に</p><p id="1f142145-0d42-80be-b290-c81c483c434e" class="">b) で</p><p id="1f142145-0d42-8043-a136-d0a440b7c870" class="">c) を</p><p id="1f142145-0d42-800d-a9e3-e36b30a5f69c" class="">d) は</p></li></ol><ol type="1" id="1f142145-0d42-80f0-9b2f-fa0b1576c134" class="numbered-list" start="3"><li>Lengkapi kalimat: きのう、友達___映画を見ました。<p id="1f142145-0d42-804a-99a8-c39371dd4069" class="">a) に</p><p id="1f142145-0d42-8075-91ed-d808d78c6788" class="">b) と</p><p id="1f142145-0d42-8011-b763-ead5b7404dd3" class="">c) で</p><p id="1f142145-0d42-80ca-b13b-e9adfaa836bb" class="">d) を</p></li></ol><ol type="1" id="1f142145-0d42-80ac-8442-f6a7f6138df4" class="numbered-list" start="4"><li>Pilih kata yang tepat: スーパー___牛乳を買います。<p id="1f142145-0d42-80a3-9be3-d25c28c25ec2" class="">a) に</p><p id="1f142145-0d42-8068-acda-ffb654249d52" class="">b) で</p><p id="1f142145-0d42-80de-ae24-eb87ed14154d" class="">c) を</p><p id="1f142145-0d42-8062-8975-d7ad4dca29f6" class="">d) は</p></li></ol><ol type="1" id="1f142145-0d42-8012-8c8f-e3dddd9d795a" class="numbered-list" start="5"><li>Lengkapi kalimat: いま___じです。<p id="1f142145-0d42-802d-9ca9-d8741a3c917f" class="">a) いち</p><p id="1f142145-0d42-8026-97f2-f66bc13478ed" class="">b) に</p><p id="1f142145-0d42-801e-840c-f5b7f79a1da5" class="">c) さん</p><p id="1f142145-0d42-8083-bc11-f0d9d41f67b2" class="">d) よん</p></li></ol><ol type="1" id="1f142145-0d42-80f7-be49-f390abb455d6" class="numbered-list" start="6"><li>Pilih bentuk yang benar: 田中さん___学生です。<p id="1f142145-0d42-80e5-999f-d31c23bb553f" class="">a) に</p><p id="1f142145-0d42-8041-aab1-e77993bccee8" class="">b) は</p><p id="1f142145-0d42-80e8-afcf-f95a41835a1c" class="">c) を</p><p id="1f142145-0d42-801d-82f8-e1568d01c459" class="">d) で</p></li></ol><ol type="1" id="1f142145-0d42-804a-b2b7-d36a205cd2e1" class="numbered-list" start="7"><li>Lengkapi kalimat: わたしは毎朝、パン___食べます。<p id="1f142145-0d42-8002-8f4b-d1f077642142" class="">a) に</p><p id="1f142145-0d42-802c-9976-e24989880540" class="">b) を</p><p id="1f142145-0d42-80fd-8599-d017e24fa94a" class="">c) で</p><p id="1f142145-0d42-808a-8d46-e33ea7f6ef8c" class="">d) は</p></li></ol><ol type="1" id="1f142145-0d42-8096-a224-dae447e37433" class="numbered-list" start="8"><li>Pilih kata yang tepat: 学校___行きます。<p id="1f142145-0d42-80ef-9de8-fd0a48a86a24" class="">a) に</p><p id="1f142145-0d42-8076-9a8e-c3c172e6a5be" class="">b) で</p><p id="1f142145-0d42-8000-8943-f0fb3eacc6a1" class="">c) を</p><p id="1f142145-0d42-8077-9e98-d5facac272c9" class="">d) は</p></li></ol><ol type="1" id="1f142145-0d42-80f8-9d12-f61dbe1155ce" class="numbered-list" start="9"><li>Lengkapi kalimat: この本___おもしろいです。<p id="1f142145-0d42-8027-9e09-ee47de65067d" class="">a) に</p><p id="1f142145-0d42-800d-b142-fc60362b7809" class="">b) は</p><p id="1f142145-0d42-803c-a003-f2cef683e852" class="">c) を</p><p id="1f142145-0d42-80c6-8f55-d8af8b888af2" class="">d) で</p></li></ol><ol type="1" id="1f142145-0d42-80be-bd7e-f02568b16a3a" class="numbered-list" start="10"><li>Pilih bentuk yang benar: きのう、雨___降りました。<p id="1f142145-0d42-80b7-9ff2-f6453f7a082d" class="">a) に</p><p id="1f142145-0d42-80fc-a046-fa44d43e6b39" class="">b) が</p><p id="1f142145-0d42-8015-8eff-d9a8a404d7df" class="">c) を</p><p id="1f142145-0d42-8092-8955-d3e9eb2a590d" class="">d) で</p></li></ol><ol type="1" id="1f142145-0d42-8028-9c6a-f7ad1d0edfb1" class="numbered-list" start="11"><li>Lengkapi kalimat: わたしは日本___来ました。<p id="1f142145-0d42-80ba-85e8-d5b6f5034f74" class="">a) に</p><p id="1f142145-0d42-8032-8905-c7b2c36ab594" class="">b) で</p><p id="1f142145-0d42-804f-bf75-e8f6cfeda7aa" class="">c) を</p><p id="1f142145-0d42-8002-a1cf-f7443b423fca" class="">d) は</p></li></ol><ol type="1" id="1f142145-0d42-80cf-b7a7-c7a3e0dd1f66" class="numbered-list" start="12"><li>Pilih kata yang tepat: 毎晩、本___読みます。<p id="1f142145-0d42-80c1-b474-c869453275d5" class="">a) に</p><p id="1f142145-0d42-80e5-a526-d5f3555b48b8" class="">b) を</p><p id="1f142145-0d42-8065-9faf-c44c05d65d35" class="">c) で</p><p id="1f142145-0d42-8049-a2ee-fd172fbe2fff" class="">d) は</p></li></ol><ol type="1" id="1f142145-0d42-806d-ab74-c71c89975475" class="numbered-list" start="13"><li>Lengkapi kalimat: いま、テレビ___見ています。<p id="1f142145-0d42-80ec-a4da-d2622fdfc28e" class="">a) に</p><p id="1f142145-0d42-80a0-862b-c73352709b64" class="">b) を</p><p id="1f142145-0d42-80d0-98b7-ec9622c1a4db" class="">c) で</p><p id="1f142145-0d42-8086-882f-d38940f3ff5e" class="">d) は</p></li></ol><ol type="1" id="1f142145-0d42-807e-84dc-d427b58383b0" class="numbered-list" start="14"><li>Pilih bentuk yang benar: 友達___手紙を書きます。<p id="1f142145-0d42-80f4-88d5-faf3ec1852c2" class="">a) に</p><p id="1f142145-0d42-806b-92a5-f5bf05643fa3" class="">b) で</p><p id="1f142145-0d42-80ec-9949-ce3cac744e82" class="">c) を</p><p id="1f142145-0d42-80fb-af78-c04a3c0284b1" class="">d) は</p></li></ol><ol type="1" id="1f142145-0d42-8046-81b5-cfe627d132c7" class="numbered-list" start="15"><li>Lengkapi kalimat: わたしはコーヒー___飲みます。<p id="1f142145-0d42-802c-ba4f-d26838aec382" class="">a) に</p><p id="1f142145-0d42-8078-8046-cc3f979af5bf" class="">b) を</p><p id="1f142145-0d42-80cf-b6aa-c7a7cb768a40" class="">c) で</p><p id="1f142145-0d42-8020-a1c9-e15571483ae4" class="">d) は</p></li></ol><h2 id="1f142145-0d42-8064-917e-e90cbd8adb8f" class="">Bagian 3: Membaca (10 Soal)</h2><ol type="1" id="1f142145-0d42-800d-9c77-d2e997bb40d6" class="numbered-list" start="1"><li>Baca teks berikut dan jawab pertanyaan:<p id="1f142145-0d42-80c3-a88c-ddb99c768ff9" class="">田中さんは毎朝7時に起きます。朝ごはんを食べて、8時に家を出ます。</p><p id="1f142145-0d42-80a7-ac25-dc39a440bcb6" class=""><strong>Pertanyaan</strong>: Kapan Tanaka-san keluar rumah?</p><p id="1f142145-0d42-80a7-b195-f729b50abca5" class="">a) 7:00</p><p id="1f142145-0d42-8060-80c0-c3cc584b3829" class="">b) 8:00</p><p id="1f142145-0d42-8020-bbc3-f2a159abd86f" class="">c) 9:00</p><p id="1f142145-0d42-8082-8444-e00e55385946" class="">d) 10:00</p></li></ol><ol type="1" id="1f142145-0d42-800a-96d4-cc7aa0f1f5ee" class="numbered-list" start="2"><li>Baca teks berikut dan jawab pertanyaan:<p id="1f142145-0d42-8070-b719-ea0be10fcd90" class="">山田さんは毎週日曜日に公園で走ります。</p><p id="1f142145-0d42-8032-84f0-df494077fa46" class=""><strong>Pertanyaan</strong>: Apa yang dilakukan Yamada-san di taman?</p><p id="1f142145-0d42-8014-8f06-ec677bd42c9b" class="">a) Membaca buku</p><p id="1f142145-0d42-80c1-97d2-f10872cf7342" class="">b) Berjalan</p><p id="1f142145-0d42-80d4-bbd9-f49f708ccb46" class="">c) Berlari</p><p id="1f142145-0d42-80c3-99ca-c157a4937a50" class="">d) Bermain</p></li></ol><ol type="1" id="1f142145-0d42-8064-87d7-c1d6a9265fce" class="numbered-list" start="3"><li>Baca teks berikut dan jawab pertanyaan:<p id="1f142145-0d42-803f-82f6-e10ea7223d14" class="">スーパーでりんごとバナナを買いました。りんごは100円です。</p><p id="1f142145-0d42-8087-970c-d73439825e00" class=""><strong>Pertanyaan</strong>: Berapa harga apel?</p><p id="1f142145-0d42-8069-850b-cd154fc62683" class="">a) 50円</p><p id="1f142145-0d42-80f6-8664-d8d94ad4a581" class="">b) 100円</p><p id="1f142145-0d42-80e3-a992-e0527bed1f3d" class="">c) 150円</p><p id="1f142145-0d42-800d-ab38-d870d250aeca" class="">d) 200円</p></li></ol><ol type="1" id="1f142145-0d42-8015-a9a9-eee887120aa5" class="numbered-list" start="4"><li>Baca teks berikut dan jawab pertanyaan:<p id="1f142145-0d42-80b7-977f-da92709fe811" class="">佐藤さんは図書館で本を借ります。毎週3冊借ります。</p><p id="1f142145-0d42-80ee-ae5f-d7e782a6b664" class=""><strong>Pertanyaan</strong>: Berapa banyak buku yang dipinjam Sato-san setiap minggu?</p><p id="1f142145-0d42-8088-a36a-e2b86fdbbfff" class="">a) 1冊</p><p id="1f142145-0d42-801c-8b85-e4ed681470bf" class="">b) 2冊</p><p id="1f142145-0d42-806a-8aeb-e9337f4193e7" class="">c) 3冊</p><p id="1f142145-0d42-80ef-b7ac-caa05d9415a4" class="">d) 4冊</p></li></ol><ol type="1" id="1f142145-0d42-803e-8176-f574d9797e1e" class="numbered-list" start="5"><li>Baca teks berikut dan jawab pertanyaan:<p id="1f142145-0d42-8066-8a82-d43b75ecf6b3" class="">わたしは毎朝、パンと牛乳を食べます。</p><p id="1f142145-0d42-809f-9a4c-f602c5618389" class=""><strong>Pertanyaan</strong>: Apa yang dimakan setiap pagi?</p><p id="1f142145-0d42-807c-99d4-e41fdc182a01" class="">a) Nasi dan air</p><p id="1f142145-0d42-80cb-9549-d7d03fbdc3c4" class="">b) Roti dan susu</p><p id="1f142145-0d42-80d3-bdb8-d2368547e384" class="">c) Mie dan teh</p><p id="1f142145-0d42-80a5-97ab-ee66da9d88b4" class="">d) Sup dan kopi</p></li></ol><ol type="1" id="1f142145-0d42-8036-beca-fad58fcfdcbf" class="numbered-list" start="6"><li>Baca teks berikut dan jawab pertanyaan:<p id="1f142145-0d42-806f-b37c-cb627c6e27db" class="">木村さんは毎晩9時に寝ます。</p><p id="1f142145-0d42-8024-950a-c149f9fe09b6" class=""><strong>Pertanyaan</strong>: Kapan Kimura-san tidur?</p><p id="1f142145-0d42-80a1-a4e5-e73cc0cd5e5f" class="">a) 8:00</p><p id="1f142145-0d42-800c-b83b-c3a20c5d907c" class="">b) 9:00</p><p id="1f142145-0d42-8073-9d72-fd6d754f40f6" class="">c) 10:00</p><p id="1f142145-0d42-804a-a14d-ce250a2aab9c" class="">d) 11:00</p></li></ol><ol type="1" id="1f142145-0d42-80d5-a406-e9c0d61db7db" class="numbered-list" start="7"><li>Baca teks berikut dan jawab pertanyaan:<p id="1f142145-0d42-80fa-a59a-f2740782fab5" class="">駅の前にコンビニがあります。</p><p id="1f142145-0d42-806b-96f7-d937dc4f3094" class=""><strong>Pertanyaan</strong>: Di mana letak minimarket?</p><p id="1f142145-0d42-8066-883c-e5d37389feca" class="">a) Di dalam stasiun</p><p id="1f142145-0d42-80ca-9b8b-d655a81f0865" class="">b) Di depan stasiun</p><p id="1f142145-0d42-80e8-9470-d178effc9ebc" class="">c) Di belakang stasiun</p><p id="1f142145-0d42-809f-a0ee-d43435112766" class="">d) Di samping stasiun</p></li></ol><ol type="1" id="1f142145-0d42-80df-a351-f06acb2a725e" class="numbered-list" start="8"><li>Baca teks berikut dan jawab pertanyaan:<p id="1f142145-0d42-8043-9025-e12a809ab217" class="">わたしはきのう、友達と映画を見ました。</p><p id="1f142145-0d42-8007-9d1b-df5848e5c8cc" class=""><strong>Pertanyaan</strong>: Apa yang dilakukan kemarin?</p><p id="1f142145-0d42-8005-b72e-d13b9be39187" class="">a) Membaca buku</p><p id="1f142145-0d42-801a-89b7-edb35cc2776f" class="">b) Menonton film</p><p id="1f142145-0d42-80ec-a15c-ce98a4f2fd26" class="">c) Bermain game</p><p id="1f142145-0d42-80a6-9874-f8bd2bf83806" class="">d) Berbelanja</p></li></ol><ol type="1" id="1f142145-0d42-80a5-85e7-fbc636e331c2" class="numbered-list" start="9"><li>Baca teks berikut dan jawab pertanyaan:<p id="1f142145-0d42-8066-936c-f78ec8108891" class="">学校は9時に始まります。</p><p id="1f142145-0d42-8039-ad9c-e9d64e01ee74" class=""><strong>Pertanyaan</strong>: Kapan sekolah dimulai?</p><p id="1f142145-0d42-80cb-a58f-ccb85888d583" class="">a) 8:00</p><p id="1f142145-0d42-80fc-98ae-f80eab816c56" class="">b) 9:00</p><p id="1f142145-0d42-80c7-97ca-ca9471fa218a" class="">c) 10:00</p><p id="1f142145-0d42-8022-97cb-cd976a85f6ac" class="">d) 11:00</p></li></ol><ol type="1" id="1f142145-0d42-80a3-bf26-f64e331cc815" class="numbered-list" start="10"><li>Baca teks berikut dan jawab pertanyaan:<p id="1f142145-0d42-8044-a2a4-c4b8f97e66e4" class="">高橋さんは毎朝、犬と散歩します。</p><p id="1f142145-0d42-8073-9537-c2f69c69a891" class=""><strong>Pertanyaan</strong>: Dengan siapa Takahashi-san berjalan-jalan?</p><p id="1f142145-0d42-80b9-a8df-eb3d3a8cb262" class="">a) Kucing</p><p id="1f142145-0d42-80cc-806e-c05e5fc8f6d0" class="">b) Anjing</p><p id="1f142145-0d42-80d9-add0-fd7a1461a996" class="">c) Burung</p><p id="1f142145-0d42-8046-8b37-f56bd699bb24" class="">d) Teman</p></li></ol><h2 id="1f142145-0d42-803b-b20c-c94201f9f5aa" class="">Bagian 4: Mendengarkan (5 Soal)</h2><p id="1f142145-0d42-808b-b64b-d5ca765825b1" class=""><strong>Catatan</strong>: Soal mendengarkan memerlukan audio. Unduh file audio dari <a href="https://www.jlpt.jp/e/samples/sample09.html">JLPT Official</a> atau <a href="https://jlptsensei.com/downloads/jlpt-n5-practice-test/">JLPT Sensei</a> untuk melengkapi soal berikut.</p><ol type="1" id="1f142145-0d42-80ab-b671-f937b94690c3" class="numbered-list" start="1"><li>Dengarkan percakapan dan pilih jawaban yang benar.<p id="1f142145-0d42-80c5-b94d-e166e56a16ca" class=""><strong>Pertanyaan</strong>: Apa yang dibeli di toko?</p><p id="1f142145-0d42-809f-84d8-e59d4d7ce3fe" class="">a) Buku</p><p id="1f142145-0d42-8061-96a2-e458ad3322ae" class="">b) Pensil</p><p id="1f142145-0d42-8074-a8ee-e7aca95c4b63" class="">c) Tas</p><p id="1f142145-0d42-80d7-b684-efccb086fc6e" class="">d) Sepatu</p></li></ol><ol type="1" id="1f142145-0d42-8042-bcc6-dcc3157d0663" class="numbered-list" start="2"><li>Dengarkan percakapan dan pilih jawaban yang benar.<p id="1f142145-0d42-802e-83b3-f6e324901986" class=""><strong>Pertanyaan</strong>: Jam berapa kereta datang?</p><p id="1f142145-0d42-806d-871f-cfa343a3a7e7" class="">a) 10:00</p><p id="1f142145-0d42-809c-98d0-d9b4e91d37e8" class="">b) 11:00</p><p id="1f142145-0d42-8059-849c-ceef873126f6" class="">c) 12:00</p><p id="1f142145-0d42-8009-81ed-d3ace7271142" class="">d) 13:00</p></li></ol><ol type="1" id="1f142145-0d42-80ac-9bc3-e99cf98ad3f9" class="numbered-list" start="3"><li>Dengarkan percakapan dan pilih jawaban yang benar.<p id="1f142145-0d42-80ec-960e-fe13a7ab92cc" class=""><strong>Pertanyaan</strong>: Di mana mereka akan bertemu?</p><p id="1f142145-0d42-807b-b5c2-e6aaeda29d24" class="">a) Di stasiun</p><p id="1f142145-0d42-8069-b9c5-db4f75ce32e2" class="">b) Di taman</p><p id="1f142145-0d42-804c-8a4c-e406a2e23d69" class="">c) Di sekolah</p><p id="1f142145-0d42-8020-8ced-ee0b6394fbce" class="">d) Di toko</p></li></ol><ol type="1" id="1f142145-0d42-8008-ae3d-c09c2ee7ca86" class="numbered-list" start="4"><li>Dengarkan percakapan dan pilih jawaban yang benar.<p id="1f142145-0d42-802e-a974-da89d9b3a74e" class=""><strong>Pertanyaan</strong>: Apa yang dimakan untuk makan siang?</p><p id="1f142145-0d42-80ad-984d-dbf691a78433" class="">a) Nasi</p><p id="1f142145-0d42-8082-b9d1-eee3d81dd30d" class="">b) Mie</p><p id="1f142145-0d42-80be-8901-c76efffde3d6" class="">c) Roti</p><p id="1f142145-0d42-8078-983d-c7a0f6f71677" class="">d) Sup</p></li></ol><ol type="1" id="1f142145-0d42-8037-99da-fac4e666cabc" class="numbered-list" start="5"><li>Dengarkan percakapan dan pilih jawaban yang benar.<p id="1f142145-0d42-80b9-b441-cb38a0a751a8" class=""><strong>Pertanyaan</strong>: Siapa yang menelepon?</p><p id="1f142145-0d42-8084-bbc6-cf41d64cc30a" class="">a) Tanaka-san</p><p id="1f142145-0d42-801f-9b6d-c205b8dbf336" class="">b) Yamada-san</p><p id="1f142145-0d42-8031-a8d5-ddd445bd87db" class="">c) Sato-san</p><p id="1f142145-0d42-8090-9e75-e5349f9cebbe" class="">d) Suzuki-san</p></li></ol><h2 id="1f142145-0d42-801c-969b-eddb36115421" class="">Catatan</h2><ul id="1f142145-0d42-80b0-807f-e248265f8348" class="bulleted-list"><li style="list-style-type:disc">Soal-soal di atas adalah contoh. Ganti dengan soal asli dari sumber seperti <a href="https://www.jlpt.jp/e/samples/sample09.html">JLPT Official</a>, <a href="https://jlptsensei.com/downloads/jlpt-n5-practice-test/">JLPT Sensei</a>, atau <a href="https://japanesetest4you.com/category/jlpt-n5/jlpt-n5-grammar-test/">Japanesetest4you.com</a>.</li></ul><ul id="1f142145-0d42-807a-8159-d6146650c307" class="bulleted-list"><li style="list-style-type:disc">Total 40 soal: 10 kosa kata, 15 tata bahasa, 10 membaca, 5 mendengarkan.</li></ul><ul id="1f142145-0d42-8031-9882-ff45715f4ba0" class="bulleted-list"><li style="list-style-type:disc">Untuk soal mendengarkan, pastikan Anda memiliki akses ke file audio dari sumber resmi.</li></ul><ul id="1f142145-0d42-8087-a0df-f70128bfe2f7" class="bulleted-list"><li style="list-style-type:disc">Simpan file ini sebagai <code>jlpt_n5_practice.md</code> untuk latihan pribadi.</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

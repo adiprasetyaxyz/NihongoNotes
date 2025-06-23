@@ -1,0 +1,689 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Catatan Bahasa Jepang</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1e242145-0d42-8088-8da4-f36bd8e9ed4e" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/woodcuts_9.jpg" style="object-position:center 0%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">📔</span></div><h1 class="page-title">Catatan Bahasa Jepang</h1><p class="page-description"></p></header><div class="page-body"><div id="1e242145-0d42-8109-a546-f63a97ef8beb" class="collection-content"><h4 class="collection-title">Course Notes</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Title</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Course</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Desc</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date</th><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesStatus"><path d="M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z"></path></svg></span>Status</th></tr></thead><tbody><tr id="1e242145-0d42-8031-abe0-d544ec0f65a2"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Pengenalan%20Kalimat%20Dasar%201e2421450d428031abe0d544ec0f65a2.html">Pengenalan Kalimat Dasar</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 01</td><td class="cell-s&gt;sW"><time>@April 25, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e242145-0d42-806a-827b-d0e3a7758931"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Kalimat%20Tanya%20dan%20Penunjuk%201e2421450d42806a827bd0e3a7758931.html">Kalimat Tanya dan Penunjuk</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 02</td><td class="cell-s&gt;sW"><time>@April 25, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e242145-0d42-8003-a957-e4650ed59ea0"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Kata%20petunjuk%20tempat%20dan%20keberadaan%201e2421450d428003a957e4650ed59ea0.html">Kata petunjuk tempat dan keberadaan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 03</td><td class="cell-s&gt;sW"><time>@April 25, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e242145-0d42-8077-9e0c-e70cca9988a4"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Waktu%20dan%20Aktifitas%201e2421450d4280779e0ce70cca9988a4.html">Waktu dan Aktifitas</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 04</td><td class="cell-s&gt;sW"><time>@April 25, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e242145-0d42-80c7-b39b-ca89f86b3206"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Kalimat%20dengan%20Kata%20Kerja%201e2421450d4280c7b39bca89f86b3206.html">Kalimat dengan Kata Kerja</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 05</td><td class="cell-s&gt;sW"><time>@April 26, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e242145-0d42-809d-a601-ce91a58c9145"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Kata%20Kerja%20Transistif%20dan%20keberadaan%201e2421450d42809da601ce91a58c9145.html">Kata Kerja Transistif dan keberadaan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 06</td><td class="cell-s&gt;sW"><time>@April 26, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e242145-0d42-8044-9ee2-f0d7c2176946"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Alat,%20Penerima,%20dan%20Keberadaan%201e2421450d4280449ee2f0d7c2176946.html">Alat, Penerima, dan Keberadaan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 07</td><td class="cell-s&gt;sW"><time>@April 26, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e242145-0d42-802e-9838-d616975030c2"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Kata%20Sifat%20dan%20Perbandingan%201e2421450d42802e9838d616975030c2.html">Kata Sifat dan Perbandingan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 08</td><td class="cell-s&gt;sW"><time>@April 26, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e242145-0d42-8048-9496-c335daef3742"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Suka,%20Bisa,%20dan%20Keharusan%201e2421450d4280489496c335daef3742.html">Suka, Bisa, dan Keharusan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 09</td><td class="cell-s&gt;sW"><time>@April 26, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e242145-0d42-802d-bd03-c64f8b4f410b"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Keberadaan%20dan%20Posisi%201e2421450d42802dbd03c64f8b4f410b.html">Keberadaan dan Posisi</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 10</td><td class="cell-s&gt;sW"><time>@April 27, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e242145-0d42-80d8-b6e8-dd58339e45bd"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Penghitungan%20dan%20Durasi%201e2421450d4280d8b6e8dd58339e45bd.html">Penghitungan dan Durasi</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 11</td><td class="cell-s&gt;sW"><time>@April 27, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e242145-0d42-8057-a588-c416bd2c465a"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Bentuk%20Lampau%20dan%20Perbandingan%20dengan%20Kata%20Sifat%201e2421450d428057a588c416bd2c465a.html">Bentuk Lampau dan Perbandingan dengan Kata Sifat</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 12</td><td class="cell-s&gt;sW"><time>@April 27, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e242145-0d42-8087-9124-d6bc96057ea6"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Keinginan%20dan%20Tindakan%20Berurutan%201e2421450d4280879124d6bc96057ea6.html">Keinginan dan Tindakan Berurutan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 13</td><td class="cell-s&gt;sW"><time>@April 27, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e442145-0d42-806d-8a33-db804cbbc94b"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Konjugasi%20Kata%20Kerja%20dan%20Bentuk%20%E3%81%A6%201e4421450d42806d8a33db804cbbc94b.html">Konjugasi Kata Kerja dan Bentuk て</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">Bab 14</td><td class="cell-s&gt;sW"><time>@April 29, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e442145-0d42-802a-8ea5-c138c4967a06"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Bentuk%20%E3%81%A6%20dan%20Larangan%201e4421450d42802a8ea5c138c4967a06.html">Bentuk て dan Larangan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">Bab 15</td><td class="cell-s&gt;sW"><time>@April 29, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e642145-0d42-8073-b77d-f6dbefadbb6d"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Bentuk%20%E3%81%A6,%20Kata%20Sifat,%20dan%20Hubungan%20Kalimat%201e6421450d428073b77df6dbefadbb6d.html">Bentuk て, Kata Sifat, dan Hubungan Kalimat</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 16</td><td class="cell-s&gt;sW"><time>@May 1, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e642145-0d42-80a8-b946-c003fc4ffaac"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Bentuk%20%E3%81%AA%E3%81%84%20dan%20Penggunaan%20Waktu%201e6421450d4280a8b946c003fc4ffaac.html">Bentuk ない dan Penggunaan Waktu</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">Bab 17</td><td class="cell-s&gt;sW"><time>@May 1, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1e942145-0d42-808d-8643-f7df8a931552"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Bentuk%20Kamus%20dan%20Pola%20Kalimat%201e9421450d42808d8643f7df8a931552.html">Bentuk Kamus dan Pola Kalimat</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 18</td><td class="cell-s&gt;sW"><time>@May 4, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e942145-0d42-803d-b8e2-c8b68ba80b83"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Bentuk%20%E3%81%9F%20dan%20Penjelasan%20Kondisi%201e9421450d42803db8e2c8b68ba80b83.html">Bentuk た dan Penjelasan Kondisi</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 19</td><td class="cell-s&gt;sW"><time>@May 4, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e942145-0d42-8058-bd94-fb14d5c246ab"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Gaya%20Sopan%20dan%20Gaya%20Biasa%201e9421450d428058bd94fb14d5c246ab.html">Gaya Sopan dan Gaya Biasa</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 20</td><td class="cell-s&gt;sW"><time>@May 4, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1ec42145-0d42-807a-af1f-edaa6d356542"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Bentuk%20Ingin%20dan%20Pengandaian%201ec421450d42807aaf1fedaa6d356542.html">Bentuk Ingin dan Pengandaian</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 21</td><td class="cell-s&gt;sW"><time>@May 7, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1ec42145-0d42-809f-977e-d4de72da47ec"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Modifikasi%20Kata%20Benda%20dan%20Penggunaan%20Waktu%201ec421450d42809f977ed4de72da47ec.html">Modifikasi Kata Benda dan Penggunaan Waktu </a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 22</td><td class="cell-s&gt;sW"><time>@May 7, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1ec42145-0d42-8098-b012-ce8e60977788"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Ekspresi%20Waktu%20dan%20Modifikasi%201ec421450d428098b012ce8e60977788.html">Ekspresi Waktu dan Modifikasi</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 23</td><td class="cell-s&gt;sW"><time>@May 7, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1ed42145-0d42-80b1-8361-c2c3f5f7c88a"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Permintaan%20dan%20Pemberian%201ed421450d4280b18361c2c3f5f7c88a.html"> Permintaan dan Pemberian</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 24</td><td class="cell-s&gt;sW"><time>@May 8, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1ed42145-0d42-8091-a6ea-fc0cb1228a76"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Kondisi%20dan%20Penekanan%201ed421450d428091a6eafc0cb1228a76.html">Kondisi dan Penekanan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred">BAB 25</td><td class="cell-s&gt;sW"><time>@May 8, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1f742145-0d42-80fc-a817-e3ccd577ce0e"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Mengungkapkan%20Perasaan%20dan%20Meminta%20Izin%201f7421450d4280fca817e3ccd577ce0e.html">Mengungkapkan Perasaan dan Meminta Izin</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 26</td><td class="cell-s&gt;sW"><time>@May 18, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1f742145-0d42-80a3-87b5-e445e27972aa"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Menyatakan%20Kemampuan%20Melakukan%20Sesuatu%201f7421450d4280a387b5e445e27972aa.html">Menyatakan Kemampuan Melakukan Sesuatu</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 27</td><td class="cell-s&gt;sW"><time>@May 18, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1fa42145-0d42-800f-8047-e62a8063bdb0"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Menjelaskan%20Aktivitas%20dan%20Alasan%20secara%20Berurutan%201fa421450d42800f8047e62a8063bdb0.html">Menjelaskan Aktivitas dan Alasan secara Berurutan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 28</td><td class="cell-s&gt;sW"><time>@May 25, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1fe42145-0d42-8041-a09f-c67dc2a252c1"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Menyatakan%20Kegiatan%20Berlangsung,%20Kejadian%20yang%20Tak%201fe421450d428041a09fc67dc2a252c1.html">Menyatakan Kegiatan Berlangsung, Kejadian yang Tak Disengaja, dan Tempat Tak Diketahui</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 29</td><td class="cell-s&gt;sW"><time>@May 25, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1fe42145-0d42-80d1-83ef-cb08f5c4c562"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Menyatakan%20Keadaan%20Tindakan,%20Persiapan,%20dan%20Keberl%201fe421450d4280d183efcb08f5c4c562.html">Menyatakan Keadaan Tindakan, Persiapan, dan Keberlangsungan Sesuatu</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 30</td><td class="cell-s&gt;sW"><time>@May 26, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1ff42145-0d42-80bd-a764-d9ca96b9146c"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Menyatakan%20Niat,%20Rencana,%20dan%20Aksi%20yang%20Belum%20Dila%201ff421450d4280bda764d9ca96b9146c.html">Menyatakan Niat, Rencana, dan Aksi yang Belum Dilakukan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 31</td><td class="cell-s&gt;sW"><time>@May 26, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20042145-0d42-80b3-9026-ff38f6813496"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Menyampaikan%20Saran,%20Kemungkinan,%20dan%20Kekhawatiran%20200421450d4280b39026ff38f6813496.html">Menyampaikan Saran, Kemungkinan, dan Kekhawatiran</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 32</td><td class="cell-s&gt;sW"><time>@May 27, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20042145-0d42-8028-bdb1-db7a8215e310"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Mengungkapkan%20Perintah,%20Larangan,%20dan%20Penyampaian%20%20200421450d428028bdb1db7a8215e310.html">Mengungkapkan Perintah, Larangan, dan Penyampaian Ucapan Tidak Langsung</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 33</td><td class="cell-s&gt;sW"><time>@May 27, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20242145-0d42-80fc-9d9c-f8de256430a8"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Urutan%20dan%20Hubungan%20Kegiatan%20202421450d4280fc9d9cf8de256430a8.html">Urutan dan Hubungan Kegiatan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 34</td><td class="cell-s&gt;sW"><time>@May 29, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20b42145-0d42-801b-acf0-e3ed46f3e388"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Kalimat%20Pengandaian%20dan%20Tingkat%20Perbandingan%2020b421450d42801bacf0e3ed46f3e388.html">Kalimat Pengandaian dan Tingkat Perbandingan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 35</td><td class="cell-s&gt;sW"><time>@June 7, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20b42145-0d42-808d-a1a3-ee042c083817"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Usaha%20dan%20Tujuan%20%E2%80%93%20Menyatakan%20Maksud%20dan%20Perubahan%2020b421450d42808da1a3ee042c083817.html">Usaha dan Tujuan – Menyatakan Maksud dan Perubahan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 36</td><td class="cell-s&gt;sW"><time>@June 7, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20b42145-0d42-804c-91e6-e1e0472052a4"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Kalimat%20Pasif%20dan%20Proses%20Pembuatan%2020b421450d42804c91e6e1e0472052a4.html">Kalimat Pasif dan Proses Pembuatan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 37</td><td class="cell-s&gt;sW"><time>@June 7, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20c42145-0d42-80fe-b033-ef65efb3a495"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Penggunaan%20%E3%80%9C%E3%81%AE%20sebagai%20Nominalisasi%20dan%20Ekspresi%20Wa%2020c421450d4280feb033ef65efb3a495.html"> Penggunaan 〜の sebagai Nominalisasi dan Ekspresi Waktu</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 38</td><td class="cell-s&gt;sW"><time>@June 8, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20c42145-0d42-801c-ab4c-e9006d00fba2"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Menyambung%20Kalimat%20dan%20Menyatakan%20Penyebab%2020c421450d42801cab4ce9006d00fba2.html">Menyambung Kalimat dan Menyatakan Penyebab</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 39</td><td class="cell-s&gt;sW"><time>@June 8, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20c42145-0d42-80c0-b3c9-d2acdec16333"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Bertanya%20secara%20Tidak%20Langsung,%20Mencoba,%20dan%20Speku%2020c421450d4280c0b3c9d2acdec16333.html">Bertanya secara Tidak Langsung, Mencoba, dan Spekulasi </a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 40</td><td class="cell-s&gt;sW"><time>@June 8, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20c42145-0d42-8097-b8f4-e8e2ec095f29"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Memberi%20dan%20Menerima%20(Benda%20dan%20Tindakan)%2020c421450d428097b8f4e8e2ec095f29.html">Memberi dan Menerima (Benda dan Tindakan)</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 41</td><td class="cell-s&gt;sW"><time>@June 8, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20d42145-0d42-805c-ae7f-f1af9f213a1f"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Tujuan,%20Kuantitas,%20dan%20Penekanan%2020d421450d42805cae7ff1af9f213a1f.html">Tujuan, Kuantitas, dan Penekanan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 42</td><td class="cell-s&gt;sW"><time>@June 9, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20d42145-0d42-80e1-9bd4-cdc2924ae4aa"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Menyampaikan%20Kesan%20dan%20Arah%20Gerakan%2020d421450d4280e19bd4cdc2924ae4aa.html">Menyampaikan Kesan dan Arah Gerakan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 43</td><td class="cell-s&gt;sW"><time>@June 9, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20e42145-0d42-80b3-9feb-fc800d40a3f9"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Ekspresi%20Tingkat,%20Kemudahan,%20Perubahan,%20dan%20Tujuan%2020e421450d4280b39febfc800d40a3f9.html">Ekspresi Tingkat, Kemudahan, Perubahan, dan Tujuan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 44</td><td class="cell-s&gt;sW"><time>@June 10, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20e42145-0d42-80a5-9341-ecf1b5edb361"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Menyampaikan%20Keadaan%20Khusus%20dan%20Ketidaksesuaian%20Ha%2020e421450d4280a59341ecf1b5edb361.html">Menyampaikan Keadaan Khusus dan Ketidaksesuaian Harapan</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 45</td><td class="cell-s&gt;sW"><time>@June 10, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20e42145-0d42-8070-a384-edf41bb82310"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Menjelaskan%20Waktu%20dan%20Perkiraan%20Situasi%2020e421450d428070a384edf41bb82310.html">Menjelaskan Waktu dan Perkiraan Situasi</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 46</td><td class="cell-s&gt;sW"><time>@June 10, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20e42145-0d42-80a8-b94a-fd52812ffe3c"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Menyampaikan%20Kesan,%20Dugaan,%20dan%20Persepsi%2020e421450d4280a8b94afd52812ffe3c.html">Menyampaikan Kesan, Dugaan, dan Persepsi</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 47</td><td class="cell-s&gt;sW"><time>@June 10, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20e42145-0d42-80fe-8cd0-f2411adfa27f"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Menyuruh%20dan%20Meminta%20Melakukan%20Sesuatu%2020e421450d4280fe8cd0f2411adfa27f.html">Menyuruh dan Meminta Melakukan Sesuatu </a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 48</td><td class="cell-s&gt;sW"><time>@June 10, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20e42145-0d42-8012-9113-fcc5f4a4b7b3"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Menggunakan%20Bahasa%20Hormat%2020e421450d4280129113fcc5f4a4b7b3.html">Menggunakan Bahasa Hormat</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 49</td><td class="cell-s&gt;sW"></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20e42145-0d42-80ec-bb62-de64a318fcec"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Mengungkapkan%20Kerendahan%20Hati%20dan%20Kesopanan%20dengan%2020e421450d4280ecbb62de64a318fcec.html">Mengungkapkan Kerendahan Hati dan Kesopanan dengan 謙譲語 dan 丁寧語</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td><td class="cell-Gred">BAB 50</td><td class="cell-s&gt;sW"></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1e242145-0d42-801e-b3df-e8cc915250ad"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/DAFTAR%20ISI%20MATERI%201e2421450d42801eb3dfe8cc915250ad.html">DAFTAR ISI MATERI</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1f742145-0d42-80bc-82a2-dabd72f7b0f1"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Untitled%201f7421450d4280bc82a2dabd72f7b0f1.html">Untitled</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1ed42145-0d42-80c0-b763-c356f91af58f"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Fungsi%20Partikel%201ed421450d4280c0b763c356f91af58f.html">Fungsi Partikel</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-gray">Notes</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1f742145-0d42-8081-989e-e71d3764b4f5"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Catatan%20Singkat%201f7421450d428081989ee71d3764b4f5.html">Catatan Singkat</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-gray">Notes</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1f742145-0d42-80a6-bc49-c6b5166a018f"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Tabel%20Volitional%20Form%20(%E6%84%8F%E5%90%91%E5%BD%A2)%201f7421450d4280a6bc49c6b5166a018f.html">Tabel Volitional Form (意向形)</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-gray">Notes</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20042145-0d42-800f-8372-f4188f6a18cf"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Tabel%20Bentuk%20Perintah%20dan%20Larangan%20(%E5%91%BD%E4%BB%A4%E5%BD%A2%E3%83%BB%E7%A6%81%E6%AD%A2%E5%BD%A2)%20200421450d42800f8372f4188f6a18cf.html">Tabel Bentuk Perintah dan Larangan (命令形・禁止形)</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-gray">Notes</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20c42145-0d42-8039-a9e8-e0a30782aecb"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Perbedaan%20pola%20kalimat%20%E3%81%AE%E3%81%AF%20dengan%20kalimat%20biasa%2020c421450d428039a9e8e0a30782aecb.html">Perbedaan pola kalimat のは dengan kalimat biasa</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-gray">Notes</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="20e42145-0d42-8087-959b-c06c4761231f"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Kata%20Kerja%20Transitif%20dan%20Intransitif%2020e421450d428087959bc06c4761231f.html"> Kata Kerja Transitif dan Intransitif </a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-gray">Notes</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1e242145-0d42-8098-be71-f3f960bde5f0"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Latihan%20Soal%20+%20Mempelajari%20ulang%20BAB%201%20-%2013%201e2421450d428098be71f3f960bde5f0.html">Latihan Soal + Mempelajari ulang BAB 1 - 13</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-green">Tracking</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"><time>@April 28, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e442145-0d42-802a-96d3-fb0361fd8b07"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Mempelajari%20BAB%2014%20-15%201e4421450d42802a96d3fb0361fd8b07.html">Mempelajari BAB 14 -15</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-green">Tracking</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"><time>@April 29, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e642145-0d42-801d-94ff-f981a9cf57d2"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Mempelajari%20BAB%2016-17%201e6421450d42801d94fff981a9cf57d2.html">Mempelajari BAB 16-17</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-green">Tracking</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"><time>@May 1, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e942145-0d42-807a-8e87-da7fdd8d0147"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Mempelajari%20BAB%2018-20%201e9421450d42807a8e87da7fdd8d0147.html">Mempelajari BAB 18-20</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-green">Tracking</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"><time>@May 4, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1ec42145-0d42-8000-bc59-c305a833f9cb"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Mempelajari%20BAB%2021-23%201ec421450d428000bc59c305a833f9cb.html">Mempelajari BAB 21-23</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-green">Tracking</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"><time>@May 7, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1ed42145-0d42-80cf-a06e-f2458d2b3fbb"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Mempelajari%20BAB%2024-25%201ed421450d4280cfa06ef2458d2b3fbb.html">Mempelajari BAB 24-25</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-green">Tracking</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"><time>@May 8, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1f742145-0d42-80e0-9f30-e4838729963e"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Latihan%20soal%201f7421450d4280e09f30e4838729963e.html">Latihan soal</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-green">Tracking</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"><time>@May 15, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1f742145-0d42-805b-825b-d68ae4398f2f"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Mempelajari%20BAB%2026%201f7421450d42805b825bd68ae4398f2f.html">Mempelajari BAB 26</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-green">Tracking</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"><time>@May 19, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e242145-0d42-8094-8969-eab9117619c2"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Latihan%20Soal%20BAB%201%20-%2013%201e2421450d4280948969eab9117619c2.html">Latihan Soal BAB 1 - 13</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-yellow">Latihan Soal</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"><time>@April 27, 2025</time></td><td class="cell-eUUu"><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr><tr id="1e642145-0d42-806f-a33f-ee5467da0268"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Latihan%20Soal%20N5%201e6421450d42806fa33fee5467da0268.html">Latihan Soal N5</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-yellow">Latihan Soal</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1f142145-0d42-805e-99d3-ce6d81d2ad50"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Untitled%201f1421450d42805e99d3ce6d81d2ad50.html">Untitled</a></td><td class="cell-rK&gt;a"><span class="selected-value select-value-color-yellow">Latihan Soal</span></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1f142145-0d42-8021-8450-c19f198f7596"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Untitled%201f1421450d4280218450c19f198f7596.html">Untitled</a></td><td class="cell-rK&gt;a"></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1f742145-0d42-801d-b62c-dc16a5a017a7"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/Untitled%201f7421450d42801db62cdc16a5a017a7.html">Untitled</a></td><td class="cell-rK&gt;a"></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr><tr id="1f742145-0d42-8015-a214-ec63324c6b71"><td class="cell-title"><a href="Catatan%20Bahasa%20Jepang%201e2421450d4280888da4f36bd8e9ed4e/Course%20Notes%201e2421450d428109a546f63a97ef8beb/UJIAN%20JLPT%20N4%201f7421450d428015a214ec63324c6b71.html">UJIAN JLPT N4</a></td><td class="cell-rK&gt;a"></td><td class="cell-Gred"></td><td class="cell-s&gt;sW"><time>@July 6, 2025</time></td><td class="cell-eUUu"><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr></tbody></table><br/><br/></div><p id="1f142145-0d42-80cb-8b49-d0ebd93c350a" class="">
+</p><p id="1e342145-0d42-808c-8901-e6d605345aa3" class="">
+</p><p id="1e242145-0d42-8068-a22a-fb884088ccbc" class="">
+</p><p id="1e242145-0d42-80d1-a8a6-f14bd178a49f" class="">
+</p><p id="1e242145-0d42-80a4-9f81-f70d179ca13a" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1e242145-0d42-81f1-bcb2-deac56d35199"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/git_gray.svg"/></div><div style="width:100%"><strong>Notion Tip:</strong> This template uses <a href="https://www.notion.so/help/guides/synced-databases-bridge-different-tools">Notion’s Synced Databases</a><em> </em>feature to bring full GitHub repositories into Notion as databases. Use familiar database functionality like filters, views, rollups, and relations to create custom views for every team.</div></figure><p id="1e242145-0d42-811e-ab04-cadbd6b2ddee" class="block-color-gray"><mark class="highlight-gray">Click </mark><mark class="highlight-gray"><code>Link to GitHub</code></mark><mark class="highlight-gray"> below to integrate your GitHub account with Notion.</mark></p><p id="1e242145-0d42-8107-bed9-c559d37d0165" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

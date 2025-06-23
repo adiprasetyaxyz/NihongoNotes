@@ -1,0 +1,683 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Menggunakan Bahasa Hormat</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="20e42145-0d42-8012-9113-fcc5f4a4b7b3" class="page sans"><header><h1 class="page-title"><strong>Menggunakan Bahasa Hormat</strong></h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Course</th><td><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Desc</th><td>BAB 49</td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesStatus"><path d="M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z"></path></svg></span>Status</th><td><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr></tbody></table></header><div class="page-body"><h2 id="20e42145-0d42-80b1-b872-dac133f2b57d" class=""><strong>Bab 49: Menggunakan Bahasa Hormat (敬語) dalam Komunikasi Formal</strong></h2><p id="20e42145-0d42-8015-91d7-c8be2d9507ba" class=""><em>Minna no Nihongo Bab 49</em></p><hr id="20e42145-0d42-80ff-9513-d0f246f3ab02"/><h3 id="20e42145-0d42-802c-87e1-f04e8a6c871d" class=""><strong>1. 敬語 (けいご) - Honorific Expressions</strong></h3><h3 id="20e42145-0d42-80b3-9739-eae31e74ee6a" class=""><strong>Penjelasan:</strong></h3><p id="20e42145-0d42-805f-8efe-f83dd42dbaad" class="">敬語 adalah bentuk khusus dalam bahasa Jepang yang digunakan untuk menunjukkan rasa hormat terhadap lawan bicara atau orang ketiga. Terdapat tiga jenis utama:</p><ul id="20e42145-0d42-800b-bfda-e1630e23bf98" class="bulleted-list"><li style="list-style-type:disc"><strong>尊敬語（そんけいご）</strong> – bentuk menghormati tindakan orang lain</li></ul><ul id="20e42145-0d42-80ef-8bfa-fcb2dd6a976a" class="bulleted-list"><li style="list-style-type:disc"><strong>謙譲語（けんじょうご）</strong> – bentuk merendahkan diri</li></ul><ul id="20e42145-0d42-80b5-8994-dd64b2a24966" class="bulleted-list"><li style="list-style-type:disc"><strong>丁寧語（ていねいご）</strong> – bentuk sopan biasa (seperti ～ます)</li></ul><h3 id="20e42145-0d42-8007-8f00-d869b0db96cc" class=""><strong>Kegunaan:</strong></h3><p id="20e42145-0d42-809e-bfff-c05ef11372ac" class="">Digunakan dalam situasi formal seperti bicara dengan atasan, pelanggan, atau orang yang dihormati. Pemilihan bentuk tergantung pada siapa subjek dari tindakan.</p><h3 id="20e42145-0d42-809f-858b-cc499de83142" class=""><strong>Contoh:</strong></h3><ul id="20e42145-0d42-803b-beac-fdbb0409a4e8" class="bulleted-list"><li style="list-style-type:disc">お客様が 来られました。<p id="20e42145-0d42-807d-81ad-ffbdbeb383d3" class=""><em>Pelanggan telah datang.</em></p><p id="20e42145-0d42-80c6-8292-f1a9ad950b61" class="">→ 尊敬語 dari 来ます → 来られます</p></li></ul><ul id="20e42145-0d42-803d-8282-f12549eb7255" class="bulleted-list"><li style="list-style-type:disc">私が ご案内いたします。<p id="20e42145-0d42-8021-b116-de210c48accf" class=""><em>Saya akan mengantar Anda.</em></p><p id="20e42145-0d42-807f-92c9-f2fb6977c49e" class="">→ 謙譲語 dari 案内します → ご案内いたします</p></li></ul><hr id="20e42145-0d42-8065-b4e3-da382d9757e8"/><h3 id="20e42145-0d42-8061-a59b-dc24ef55e351" class=""><strong>2. Types of 敬語（けいごの種類）</strong></h3><h3 id="20e42145-0d42-807b-bd7d-ee2883bc5b2e" class=""><strong>Penjelasan:</strong></h3><ul id="20e42145-0d42-8075-b648-de9a6b6e2c89" class="bulleted-list"><li style="list-style-type:disc"><strong>尊敬語</strong> (Respectful): digunakan untuk orang lain yang dihormati.<p id="20e42145-0d42-8071-9e1e-cadf7e68522f" class="">Contoh: 先生が おっしゃいました。(<em>Sensei berkata.</em>)</p></li></ul><ul id="20e42145-0d42-801f-b23c-eef067f4a0b6" class="bulleted-list"><li style="list-style-type:disc"><strong>謙譲語</strong> (Humble): digunakan untuk merendahkan tindakan diri sendiri demi menghormati orang lain.<p id="20e42145-0d42-80d2-96dd-f9d79b30104f" class="">Contoh: 私が 先生に お伝えします。(<em>Saya akan menyampaikan kepada Sensei.</em>)</p></li></ul><ul id="20e42145-0d42-807f-8345-ff09a6018eff" class="bulleted-list"><li style="list-style-type:disc"><strong>丁寧語</strong> (Polite): digunakan dalam percakapan sehari-hari yang sopan.<p id="20e42145-0d42-80a9-a8de-efecd45fdf94" class="">Contoh: 行きます、食べます、見ます</p></li></ul><h3 id="20e42145-0d42-8072-9a19-e2369c49c1a5" class=""><strong>Kegunaan:</strong></h3><p id="20e42145-0d42-80ad-8feb-e679d5bf9b40" class="">Dipakai sesuai hubungan sosial. Penting dalam dunia kerja dan komunikasi resmi.</p><h3 id="20e42145-0d42-8084-8f3f-facc521443d7" class=""><strong>Contoh:</strong></h3><ul id="20e42145-0d42-80fc-a8fc-c39227127712" class="bulleted-list"><li style="list-style-type:disc">尊敬語：部長は 今 会議に 出ていらっしゃいます。<p id="20e42145-0d42-807f-b4d9-d16fa345ee05" class=""><em>Manajer sedang mengikuti rapat sekarang.</em></p></li></ul><ul id="20e42145-0d42-8060-9373-e817b4555172" class="bulleted-list"><li style="list-style-type:disc">謙譲語：私が 部長に 書類を お渡しします。<p id="20e42145-0d42-8093-a84e-f7096d96e8d4" class=""><em>Saya akan memberikan dokumen kepada manajer.</em></p></li></ul><hr id="20e42145-0d42-80a8-a4e8-d2a2f5b026c9"/><h3 id="20e42145-0d42-8058-a185-d1ff56b66f1c" class=""><strong>3. 尊敬語 (そんけいご) – Respectful Expressions</strong></h3><h3 id="20e42145-0d42-80d5-8f65-f83c967e3700" class=""><strong>Penjelasan:</strong></h3><p id="20e42145-0d42-8077-a208-caeb9402261d" class="">Bentuk ini digunakan ketika subjek kalimat adalah orang yang dihormati. Biasanya diakhiri dengan bentuk pasif atau ekspresi khusus.</p><table id="20e42145-0d42-80ed-88a7-e4a0e9b6aa42" class="simple-table"><tbody><tr id="20e42145-0d42-8019-914f-fb0e3214bf99"><td id="ZwX]" class="">Kata Kerja Biasa</td><td id="NnbZ" class="">尊敬語</td></tr><tr id="20e42145-0d42-80f6-a744-d07c8a35f709"><td id="ZwX]" class="">言います</td><td id="NnbZ" class="">おっしゃいます</td></tr><tr id="20e42145-0d42-805b-9479-d8a4fd079c61"><td id="ZwX]" class="">行きます／来ます</td><td id="NnbZ" class="">いらっしゃいます／おいでになります</td></tr><tr id="20e42145-0d42-80d7-937b-cef047151ada"><td id="ZwX]" class="">します</td><td id="NnbZ" class="">なさいます</td></tr><tr id="20e42145-0d42-8085-bb62-eb10047fd9c3"><td id="ZwX]" class="">食べます／飲みます</td><td id="NnbZ" class="">召し上がります</td></tr></tbody></table><h3 id="20e42145-0d42-80ae-b282-f08a3b9c0c41" class=""><strong>Contoh:</strong></h3><ul id="20e42145-0d42-8021-ac15-c959bbd735e1" class="bulleted-list"><li style="list-style-type:disc">社長は 明日 韓国へ 行かれます。<p id="20e42145-0d42-8062-b9ac-c91114c695a4" class=""><em>Presiden direktur akan pergi ke Korea besok.</em></p></li></ul><ul id="20e42145-0d42-806c-a29a-c996caa541d1" class="bulleted-list"><li style="list-style-type:disc">鈴木先生は この 本を 書かれました。<p id="20e42145-0d42-8021-a028-d529026c2d7c" class=""><em>Profesor Suzuki menulis buku ini.</em></p></li></ul><hr id="20e42145-0d42-806b-a74e-f50b999b9815"/><h3 id="20e42145-0d42-806b-af03-d9300eb78b64" class=""><strong>4. 敬語 and Style of Sentence</strong></h3><h3 id="20e42145-0d42-8086-85be-ed3bafd41123" class=""><strong>Penjelasan:</strong></h3><p id="20e42145-0d42-80fa-9863-c7400ef6d1af" class="">Dalam satu kalimat, gaya bahasa harus konsisten. Tidak boleh mencampur bentuk sopan biasa dengan bentuk kasar atau terlalu rendah.</p><h3 id="20e42145-0d42-8013-b929-db1da8a47e30" class=""><strong>Contoh yang salah:</strong></h3><p id="20e42145-0d42-8004-afcd-f6f988d05ab7" class="">× 社長が いらっしゃったから、帰った。</p><p id="20e42145-0d42-803e-8c16-dbfa42a90c7a" class="">(Kata pertama terlalu hormat, tapi akhir kalimat terlalu biasa.)</p><h3 id="20e42145-0d42-809c-8cdf-c5b15e5dd4e6" class=""><strong>Contoh yang benar:</strong></h3><p id="20e42145-0d42-80f5-8a8f-e6d7bbe152f1" class="">○ 社長が いらっしゃったので、帰りました。</p><hr id="20e42145-0d42-8081-a89a-ff2ee38c62d8"/><h3 id="20e42145-0d42-8076-908b-fd3a5feb6ad2" class=""><strong>5. Uniform level of 敬語 in a sentence</strong></h3><h3 id="20e42145-0d42-80cb-89ca-eaef9edd1a30" class=""><strong>Penjelasan:</strong></h3><p id="20e42145-0d42-80be-a296-fbc9652132b1" class="">Kalimat harus konsisten dalam tingkat keformalan. Hindari mencampur-campur 丁寧語 dan 普通体 tanpa alasan gaya tertentu (misal: narasi).</p><h3 id="20e42145-0d42-8026-9a1c-c36845cac9b4" class=""><strong>Contoh:</strong></h3><ul id="20e42145-0d42-8091-a5de-c1d142e35b63" class="bulleted-list"><li style="list-style-type:disc">× 先生が いらっしゃって、わたしは 帰った。<p id="20e42145-0d42-8061-8345-e4f051a461c1" class="">(Campur 尊敬語 dan bentuk biasa.)</p></li></ul><ul id="20e42145-0d42-80ea-a90c-f096da42e2a0" class="bulleted-list"><li style="list-style-type:disc">○ 先生が いらっしゃって、わたしも 帰りました。<p id="20e42145-0d42-80b2-9226-dea9cce6e046" class="">(Konsisten sopan.)</p></li></ul><hr id="20e42145-0d42-80e0-ab33-fde8430db344"/><h3 id="20e42145-0d42-80aa-a2dd-cf3d31dd6df0" class=""><strong>6. ～まして (bentuk sambung sopan)</strong></h3><h3 id="20e42145-0d42-8094-add7-c7d47a0120ee" class=""><strong>Penjelasan:</strong></h3><p id="20e42145-0d42-809c-a41e-d6241cdf13e9" class="">Bentuk ～まして digunakan untuk menyambung dua kalimat sopan, lebih formal dari ～て.</p><h3 id="20e42145-0d42-8048-a21f-dff1ae42f499" class=""><strong>Kegunaan:</strong></h3><p id="20e42145-0d42-805f-af50-f7e1a526ae33" class="">Umumnya dipakai dalam pidato, pengumuman resmi, atau surat bisnis.</p><h3 id="20e42145-0d42-80af-9465-fab13e267757" class=""><strong>Contoh:</strong></h3><ul id="20e42145-0d42-805a-9b29-d81755e1eef3" class="bulleted-list"><li style="list-style-type:disc">初めまして。私は アンディと申します。<p id="20e42145-0d42-80fa-9991-cc19f3a8910d" class=""><em>Salam kenal. Nama saya Andy.</em></p><p id="20e42145-0d42-803d-8933-da65ad98c3b7" class="">→ Dipakai sebagai sapaan pertama kali.</p></li></ul><ul id="20e42145-0d42-8021-8870-e39d48a319c2" class="bulleted-list"><li style="list-style-type:disc">昨日は 忙しくて、今朝も 早く 起きまして、まだ疲れています。<p id="20e42145-0d42-80e2-a006-fd23743c27e3" class=""><em>Kemarin saya sibuk, dan pagi ini pun bangun pagi, jadi saya masih lelah.</em></p></li></ul><hr id="20e42145-0d42-8063-a526-e438bf34e4b8"/><h3 id="20e42145-0d42-80f6-8bc3-e0c76abed9ed" class=""><strong>Catatan tentang 敬語:</strong></h3><ul id="20e42145-0d42-80c1-ba4e-d582cff34ec0" class="bulleted-list"><li style="list-style-type:disc">尊敬語 digunakan untuk menunjukkan rasa hormat terhadap orang lain.</li></ul><ul id="20e42145-0d42-80e9-a9f2-c2312271cae3" class="bulleted-list"><li style="list-style-type:disc">謙譲語 digunakan untuk menunjukkan kerendahan diri sendiri agar menghormati lawan bicara.</li></ul><ul id="20e42145-0d42-803d-b5c6-e8061757a6ab" class="bulleted-list"><li style="list-style-type:disc">丁寧語 hanya menunjukkan kesopanan, bukan relasi sosial.</li></ul><ul id="20e42145-0d42-8032-9dfe-ec5162b6f6ff" class="bulleted-list"><li style="list-style-type:disc">Kata kerja tertentu memiliki bentuk khusus yang tidak mengikuti pola umum.</li></ul><hr id="20e42145-0d42-806b-b08a-ea1090d89556"/><h3 id="20e42145-0d42-805f-82b3-f880e520b8fc" class=""><strong>Catatan Penting:</strong></h3><ul id="20e42145-0d42-8095-85e9-c6cdecf65bdc" class="bulleted-list"><li style="list-style-type:disc">Pilih bentuk 敬語 berdasarkan siapa yang menjadi subjek dan siapa lawan bicara.</li></ul><ul id="20e42145-0d42-80bf-96b0-ee396a99dfd9" class="bulleted-list"><li style="list-style-type:disc">Jangan mencampur bentuk sopan dan biasa dalam satu kalimat.</li></ul><ul id="20e42145-0d42-80f5-86e5-e052ca1eeacb" class="bulleted-list"><li style="list-style-type:disc">Gunakan ～まして untuk menyambung kalimat sopan dengan lebih formal.</li></ul><hr id="20e42145-0d42-807e-9b07-d9e3cf0f7517"/><h3 id="20e42145-0d42-80b4-84df-d0aeb2ef4676" class=""><strong>Note Kanji dan Artinya:</strong></h3><table id="20e42145-0d42-8046-9e20-f93172490ccb" class="simple-table"><tbody><tr id="20e42145-0d42-80d8-9aed-fd49b7279e13"><td id="NNTU" class="">Kanji</td><td id="aCUA" class="">Hiragana</td><td id="UZsG" class="">Arti</td></tr><tr id="20e42145-0d42-80c9-b2a8-caeb49801890"><td id="NNTU" class="">敬語</td><td id="aCUA" class="">けいご</td><td id="UZsG" class="">Bahasa kehormatan</td></tr><tr id="20e42145-0d42-808b-acd4-d8ad54de8052"><td id="NNTU" class="">尊敬語</td><td id="aCUA" class="">そんけいご</td><td id="UZsG" class="">Bahasa hormat (respectful)</td></tr><tr id="20e42145-0d42-800f-9523-d3d14ea74e18"><td id="NNTU" class="">謙譲語</td><td id="aCUA" class="">けんじょうご</td><td id="UZsG" class="">Bahasa merendahkan diri</td></tr><tr id="20e42145-0d42-80b8-9426-d011f6c9cec4"><td id="NNTU" class="">丁寧語</td><td id="aCUA" class="">ていねいご</td><td id="UZsG" class="">Bahasa sopan</td></tr><tr id="20e42145-0d42-8014-84f1-ed46f3351cf9"><td id="NNTU" class="">社長</td><td id="aCUA" class="">しゃちょう</td><td id="UZsG" class="">Direktur/pimpinan perusahaan</td></tr><tr id="20e42145-0d42-8003-9289-c9b944c3867b"><td id="NNTU" class="">会議</td><td id="aCUA" class="">かいぎ</td><td id="UZsG" class="">Rapat</td></tr><tr id="20e42145-0d42-800b-ba0b-d537b9dbee81"><td id="NNTU" class="">渡す</td><td id="aCUA" class="">わたす</td><td id="UZsG" class="">Memberikan</td></tr><tr id="20e42145-0d42-8097-901a-f836b488e8ba"><td id="NNTU" class="">案内</td><td id="aCUA" class="">あんない</td><td id="UZsG" class="">Mengantar/memandu</td></tr><tr id="20e42145-0d42-80ba-a157-c5aee1a77440"><td id="NNTU" class="">意見</td><td id="aCUA" class="">いけん</td><td id="UZsG" class="">Pendapat</td></tr><tr id="20e42145-0d42-8028-ac40-dbe35721989b"><td id="NNTU" class="">初め</td><td id="aCUA" class="">はじめ</td><td id="UZsG" class="">Awal</td></tr><tr id="20e42145-0d42-804f-94ab-cc2b8818e26b"><td id="NNTU" class="">疲れます</td><td id="aCUA" class="">つかれます</td><td id="UZsG" class="">Lelah</td></tr></tbody></table></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

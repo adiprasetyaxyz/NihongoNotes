@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Menyuruh dan Meminta Melakukan Sesuatu </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="20e42145-0d42-80fe-8cd0-f2411adfa27f" class="page sans"><header><h1 class="page-title"><strong>Menyuruh dan Meminta Melakukan Sesuatu </strong></h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Course</th><td><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Desc</th><td>BAB 48</td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date</th><td><time>@June 10, 2025</time></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesStatus"><path d="M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z"></path></svg></span>Status</th><td><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr></tbody></table></header><div class="page-body"><h2 id="20e42145-0d42-80f8-abe5-fee62353877b" class=""><strong>Bab 48: Menyuruh dan Meminta Melakukan Sesuatu – Minna no Nihongo</strong></h2><hr id="20e42145-0d42-80ed-ae60-e0ca44410d68"/><h3 id="20e42145-0d42-807f-bc2a-d08c7aec4fbe" class=""></h3><h3 id="20e42145-0d42-809b-ab40-e22eedbd730b" class=""><strong>1. Causative Verbs（使役動詞）</strong></h3><h3 id="20e42145-0d42-80b0-b6e9-ee28d7abc45f" class=""><strong>Cara Membentuk Kata Kerja Causative</strong></h3><table id="20e42145-0d42-8030-8adb-f194ed47f64f" class="simple-table"><tbody><tr id="20e42145-0d42-809c-a8b7-e8e9c1283f6c"><td id="WUl&gt;" class="">Kelompok</td><td id="u&gt;Ye" class="">Kata Kerja (Polite)</td><td id="TNhB" class="">Bentuk Causative Polite</td><td id="gclH" class="">Bentuk Causative Biasa</td></tr><tr id="20e42145-0d42-80f5-8ab9-d60a63685d3c"><td id="WUl&gt;" class="">I</td><td id="u&gt;Ye" class="">いきます（行きます）</td><td id="TNhB" class="">いかせます</td><td id="gclH" class="">いかせる</td></tr><tr id="20e42145-0d42-80a6-b95a-f3cd91221f74"><td id="WUl&gt;" class="">II</td><td id="u&gt;Ye" class="">たべます（食べます）</td><td id="TNhB" class="">たべさせます</td><td id="gclH" class="">たべさせる</td></tr><tr id="20e42145-0d42-8012-a605-cd53487cedc5"><td id="WUl&gt;" class="">III</td><td id="u&gt;Ye" class="">きます（来ます）</td><td id="TNhB" class="">こさせます</td><td id="gclH" class="">こさせる</td></tr><tr id="20e42145-0d42-8037-b41b-cec59d7558ba"><td id="WUl&gt;" class=""></td><td id="u&gt;Ye" class="">します</td><td id="TNhB" class="">させます</td><td id="gclH" class="">させる</td></tr></tbody></table><ul id="20e42145-0d42-80ad-ae3a-dccc0c48561a" class="bulleted-list"><li style="list-style-type:disc">Semua kata kerja causative dikonjugasi seperti kata kerja <strong>kelompok II</strong>, termasuk bentuk kamus, bentukない, bentukて, dll.</li></ul><ul id="20e42145-0d42-80a6-9954-e8b431ee1894" class="bulleted-list"><li style="list-style-type:disc">Contoh konjugasi:<p id="20e42145-0d42-8088-8af3-eaf78b58fbb9" class="">いかせる、いかせない、いかせて</p><p id="20e42145-0d42-8087-af38-d9d30d44fcc9" class="">
+</p><h3 id="20e42145-0d42-805b-a906-d94bb598638e" class="">Penjelasan:</h3><p id="20e42145-0d42-80c7-b0fd-f7f97b8648fa" class="">Bentuk causative menyatakan bahwa <strong>seseorang menyuruh atau membiarkan orang lain melakukan sesuatu</strong>. Dalam bahasa Indonesia bisa diartikan sebagai “membuat”, “membiarkan”, atau “menyuruh (orang lain)”.</p><h3 id="20e42145-0d42-8049-bf3e-f3912ae8f9be" class="">Kegunaan:</h3><ul id="20e42145-0d42-80ce-98db-e5640edd1bd7" class="bulleted-list"><li style="list-style-type:circle">Digunakan dalam konteks formal atau netral saat membicarakan perintah, izin, atau paksaan untuk melakukan suatu tindakan.</li></ul></li></ul><hr id="20e42145-0d42-8065-b23f-e4479e2b8ae6"/><h3 id="20e42145-0d42-8067-a854-e183e2d84b29" class=""><strong>2. Causative Verb Sentences（使役文）</strong></h3><p id="20e42145-0d42-80ca-8641-c56ae89e33e2" class="">Terdapat dua tipe kalimat causative, tergantung jenis kata kerjanya:</p><hr id="20e42145-0d42-8044-a5dc-f6fc576e39f8"/><h3 id="20e42145-0d42-8067-b8e3-c5c3c4f165dd" class=""><strong>1) Kalimat dengan Kata Kerja Intransitif（自動詞）</strong></h3><h3 id="20e42145-0d42-80c9-8121-d6c7304534fc" class=""><strong>Pola:</strong></h3><p id="20e42145-0d42-806d-9101-c3f1fb931fe8" class=""><strong>N (orang) を V（intransitif）causative</strong></p><p id="20e42145-0d42-802a-870c-e3baef898a83" class="">→ Menyuruh/membiarkan seseorang melakukan V (intransitif)</p><h3 id="20e42145-0d42-8060-ad02-d2875db2f443" class=""><strong>Contoh:</strong></h3><table id="20e42145-0d42-80da-a852-ffecabfb4ac1" class="simple-table"><tbody><tr id="20e42145-0d42-80d2-b3a3-d1e7d2700cc6"><td id="lppX" class="">No.</td><td id="ev]k" class="">Kalimat Jepang</td><td id=";SRg" class="">Arti</td></tr><tr id="20e42145-0d42-8037-a157-e1150f77273b"><td id="lppX" class="">①</td><td id="ev]k" class="">部長は 加藤さんを 大阪へ 出張させます。（ぶちょうは かとうさんを おおさかへ しゅっちょうさせます）</td><td id=";SRg" class="">Kepala bagian menyuruh Pak Kato pergi dinas ke Osaka.</td></tr><tr id="20e42145-0d42-80d0-9d9c-d2869185da06"><td id="lppX" class="">②</td><td id="ev]k" class="">わたしは 娘を 自由に 遊ばせました。（わたしは むすめを じゆうに あそばせました）</td><td id=";SRg" class="">Saya membiarkan anak perempuan saya bermain dengan bebas.</td></tr></tbody></table><h3 id="20e42145-0d42-8054-b5d5-cd6fc4407e3f" class=""><strong>Catatan:</strong></h3><p id="20e42145-0d42-80c6-b4bb-c4d87f8dd1c0" class="">Jika dalam kalimat terdapat keterangan tempat dengan partikel <strong>を</strong>, maka subjek tindakan menggunakan <strong>に</strong>, bukan <strong>を</strong>.</p><table id="20e42145-0d42-804e-aa27-d2c4342dc29c" class="simple-table"><tbody><tr id="20e42145-0d42-8000-9a80-ec8fe0b4e69d"><td id="Jcp&lt;" class="">No.</td><td id="@=pM" class="">Kalimat Jepang</td><td id="JHha" class="">Arti</td></tr><tr id="20e42145-0d42-80e4-8a90-f70fc6b562e3"><td id="Jcp&lt;" class="">③</td><td id="@=pM" class="">わたしは 子どもに 道の 右側を 歩かせます。（わたしは こどもに みちの みぎがわを あるかせます）</td><td id="JHha" class="">Saya menyuruh anak saya berjalan di sisi kanan jalan.</td></tr><tr id="20e42145-0d42-801d-8019-ec14b5b24522"><td id="Jcp&lt;" class="">④</td><td id="@=pM" class="">わたしは 子どもを 歩かせます。（わたしは こどもを あるかせます）</td><td id="JHha" class="">Saya menyuruh anak saya berjalan.</td></tr></tbody></table><hr id="20e42145-0d42-80e2-bd41-e5df6f0094c2"/><h3 id="20e42145-0d42-80ed-ae2a-ce1cfbe8a8f7" class=""><strong>2) Kalimat dengan Kata Kerja Transitif（他動詞）</strong></h3><h3 id="20e42145-0d42-8092-b0bc-f6821b8a3a06" class=""><strong>Pola:</strong></h3><p id="20e42145-0d42-8027-b219-f78ecd7043b5" class=""><strong>N (orang) に N (benda) を V（transitif）causative</strong></p><p id="20e42145-0d42-80ef-9a43-eea3a595484e" class="">→ Menyuruh seseorang melakukan V (transitif)</p><h3 id="20e42145-0d42-80ca-8936-df6c6edc437b" class=""><strong>Contoh:</strong></h3><table id="20e42145-0d42-80c0-9c14-ed71159aa402" class="simple-table"><tbody><tr id="20e42145-0d42-8082-9170-c98942dd9bc5"><td id="IE&lt;x" class="">No.</td><td id=":[|{" class="">Kalimat Jepang</td><td id="rs}?" class="">Arti</td></tr><tr id="20e42145-0d42-80bb-acbf-f327fb1d64a9"><td id="IE&lt;x" class="">①</td><td id=":[|{" class="">朝早いので、 娘に 朝ごはんの 準備を 手伝わせます。（あさはやいので、 むすめに あさごはんの じゅんびを てつだわせます）</td><td id="rs}?" class="">Karena pagi hari, saya menyuruh anak perempuan saya membantu menyiapkan sarapan.</td></tr><tr id="20e42145-0d42-8028-a2bf-e35ebd2f5d21"><td id="IE&lt;x" class="">②</td><td id=":[|{" class="">先生は 生徒に 自由に 意見を 言わせました。（せんせいは せいとに じゆうに いけんを いわせました）</td><td id="rs}?" class=""></td></tr></tbody></table><hr id="20e42145-0d42-801d-8b9c-ebbc0641a8ad"/><p id="20e42145-0d42-8026-9da8-e3b55a6d2be6" class=""><a href="Kata%20Kerja%20Transitif%20dan%20Intransitif%2020e421450d428087959bc06c4761231f.html"> Kata Kerja Transitif dan Intransitif </a> </p><h3 id="20e42145-0d42-8030-a2c3-da6eb07b8dbb" class=""><strong>3. Usage of a Causative（使役の使い方）</strong></h3><h3 id="20e42145-0d42-8016-b11f-d40a08f2defa" class="">Penjelasan:</h3><p id="20e42145-0d42-8075-b816-ec3da3e70808" class="">Causative digunakan dalam dua konteks utama:</p><ol type="1" id="20e42145-0d42-8016-b983-d551ecd96c03" class="numbered-list" start="1"><li><strong>Menyuruh (強制的にさせる):</strong> paksaan / kewajiban.</li></ol><ol type="1" id="20e42145-0d42-800d-a11f-fdcd791153b8" class="numbered-list" start="2"><li><strong>Membiarkan (許可的にさせる):</strong> memberi izin.</li></ol><h3 id="20e42145-0d42-80e8-924a-e5a2301aabf0" class="">Perbedaan makna bisa ditentukan oleh konteks kalimat, intonasi, dan jenis verba.</h3><h3 id="20e42145-0d42-805e-869f-d2d0d25a257c" class="">Contoh 1 (menyuruh):</h3><p id="20e42145-0d42-80e2-9673-fdb060397a9d" class="">母は 子どもに 早く 寝させました。</p><p id="20e42145-0d42-8024-9662-c55ebb7a5d09" class="">➤ Ibu menyuruh anaknya tidur lebih awal.</p><h3 id="20e42145-0d42-8089-b6d9-c6cdaf3af36f" class="">Contoh 2 (membiarkan):</h3><p id="20e42145-0d42-80f7-a6b6-fd03777f6a70" class="">先生は 学生を 自由に 発表させました。</p><p id="20e42145-0d42-8043-9e04-efe011685707" class="">➤ Guru membiarkan murid melakukan presentasi dengan bebas.</p><hr id="20e42145-0d42-807a-88c1-e7e017c40924"/><h3 id="20e42145-0d42-80ac-a9f2-dbb54339c1e3" class=""><strong>Catatan tentang 「～させる」</strong></h3><ul id="20e42145-0d42-80dc-89d8-dfb761bde7e4" class="bulleted-list"><li style="list-style-type:disc">「～させて あげます／くれます／もらいます」: menyatakan siapa yang mendapat manfaat atau izin.</li></ul><ul id="20e42145-0d42-803e-95ff-f2bc69ead644" class="bulleted-list"><li style="list-style-type:disc">「～させられる」: bentuk <strong>passive causative</strong>, akan dipelajari lebih lanjut di bab selanjutnya.</li></ul><h3 id="20e42145-0d42-80c2-8546-d57974a514b7" class="">Contoh tambahan:</h3><p id="20e42145-0d42-8037-8bb9-eb1b4bcfc554" class="">私は 弟に 宿題を 手伝わせました。</p><p id="20e42145-0d42-80ba-856e-d472905e0ea0" class="">➤ Saya menyuruh adik laki-laki saya membantu PR saya.</p><hr id="20e42145-0d42-8017-b695-e90cce76ae51"/><h3 id="20e42145-0d42-8083-986d-ee27f8c4f4e9" class=""><strong>4. V causative て-form ＋ いただけませんか（依頼表現）</strong></h3><h3 id="20e42145-0d42-80df-858f-e9088422d213" class="">Penjelasan:</h3><p id="20e42145-0d42-809d-a91c-cf20b891438b" class="">Pola ini digunakan untuk menyatakan permintaan <strong>yang sangat sopan</strong>, setara dengan “Bolehkah saya minta Anda untuk membiarkan saya…?”</p><h3 id="20e42145-0d42-8038-aa7b-d8cde70afd6e" class="">Kegunaan:</h3><ul id="20e42145-0d42-804c-bc1d-e9e1acf14597" class="bulleted-list"><li style="list-style-type:disc">Digunakan dalam situasi formal, seperti berbicara kepada atasan, klien, atau orang asing.</li></ul><ul id="20e42145-0d42-80fd-bf8f-dad6974ddb08" class="bulleted-list"><li style="list-style-type:disc">Pola ini menyiratkan <strong>kerendahan hati</strong> dari pembicara.</li></ul><h3 id="20e42145-0d42-808d-8c4f-dd60b1682531" class="">Contoh 1:</h3><p id="20e42145-0d42-808b-8d71-e309be62c2d0" class="">この 書類を コピーさせて いただけませんか。</p><p id="20e42145-0d42-80b1-b4f8-d524ef0b3f98" class="">➤ Bolehkah saya minta izin untuk menyalin dokumen ini?</p><h3 id="20e42145-0d42-80d0-8a5f-d4d378c9ff70" class="">Contoh 2:</h3><p id="20e42145-0d42-80ff-8e33-d39dcae1f5eb" class="">少し 話させて いただけませんか。</p><p id="20e42145-0d42-800b-b064-dc5564855f56" class="">➤ Bolehkah saya minta izin untuk berbicara sebentar?</p><h3 id="20e42145-0d42-8011-940c-c1a13d94bdc6" class="">Contoh 3 (dalam percakapan):</h3><p id="20e42145-0d42-8064-9338-f7650d0c6c55" class="">すみません、こちらで 写真を 撮らせて いただけませんか。</p><p id="20e42145-0d42-8053-a624-cb2db15a37cb" class="">➤ Permisi, bolehkah saya mengambil foto di sini?</p><hr id="20e42145-0d42-8072-8065-ca9c96872ace"/><h3 id="20e42145-0d42-80f0-825d-f0074a0b8d0a" class="">Keterangan:</h3><ul id="20e42145-0d42-8004-b555-d6538f5baee9" class="bulleted-list"><li style="list-style-type:disc">Bentuk 「～させて いただけませんか」 sangat formal dan menunjukkan rasa hormat tinggi.</li></ul><ul id="20e42145-0d42-8028-b36e-df82fe007689" class="bulleted-list"><li style="list-style-type:disc">Dalam percakapan biasa, cukup menggunakan 「～ても いいですか」 atau 「～させて ください」 untuk permintaan umum.</li></ul><ul id="20e42145-0d42-80cc-8a2d-d3772cd9b209" class="bulleted-list"><li style="list-style-type:disc">Tidak digunakan dalam konteks menyuruh secara paksa.</li></ul><hr id="20e42145-0d42-80b1-abc3-e0d36ff84f9d"/><h3 id="20e42145-0d42-8098-a890-edd98c8f465d" class="">Catatan Penting:</h3><table id="20e42145-0d42-800a-8b11-f45a0187c133" class="simple-table"><tbody><tr id="20e42145-0d42-80c2-9298-dbcf311c36b4"><td id="}dNX" class="">Pola</td><td id="oV@S" class="">Fungsi utama</td><td id="ZrqW" class="">Gaya Bahasa</td></tr><tr id="20e42145-0d42-80d8-9e79-f873836711bf"><td id="}dNX" class="">Vさせる</td><td id="oV@S" class="">Menyuruh / Membiarkan</td><td id="ZrqW" class="">Netral / formal</td></tr><tr id="20e42145-0d42-8019-9c80-fcda918dd10a"><td id="}dNX" class="">Aは Bに Vさせる</td><td id="oV@S" class="">Menyatakan hubungan perintah</td><td id="ZrqW" class="">Netral / formal</td></tr><tr id="20e42145-0d42-8057-9faa-dd0230a694f2"><td id="}dNX" class="">Vさせていただけませんか</td><td id="oV@S" class="">Meminta izin sopan untuk melakukan</td><td id="ZrqW" class="">Sangat sopan / formal</td></tr><tr id="20e42145-0d42-8033-94f0-c8ec84bd6dbb"><td id="}dNX" class="">Vさせてくれる / Vさせてもらう</td><td id="oV@S" class="">Mendapat izin / bantuan</td><td id="ZrqW" class="">Gaya biasa / sopan</td></tr></tbody></table><hr id="20e42145-0d42-801b-b849-d6e6883812c7"/><h3 id="20e42145-0d42-8000-a1f0-c8c8d087363f" class="">Note Kanji dan Artinya:</h3><table id="20e42145-0d42-8046-9fb3-efabd29d303b" class="simple-table"><tbody><tr id="20e42145-0d42-80a2-8ff7-fef843f3b2ab"><td id="KCrh" class="">Kanji</td><td id="EDKk" class="">Hiragana</td><td id="jJFV" class="">Arti</td></tr><tr id="20e42145-0d42-802f-86e5-dcf451de0c91"><td id="KCrh" class="">母</td><td id="EDKk" class="">はは</td><td id="jJFV" class="">ibu</td></tr><tr id="20e42145-0d42-806b-90b0-c15115e1de71"><td id="KCrh" class="">子ども</td><td id="EDKk" class="">こども</td><td id="jJFV" class="">anak</td></tr><tr id="20e42145-0d42-8032-b6ca-f6674bb1f14c"><td id="KCrh" class="">野菜</td><td id="EDKk" class="">やさい</td><td id="jJFV" class="">sayuran</td></tr><tr id="20e42145-0d42-8075-9bad-c18a981bca30"><td id="KCrh" class="">食べる</td><td id="EDKk" class="">たべる</td><td id="jJFV" class="">makan</td></tr><tr id="20e42145-0d42-80fb-b2d6-c21fa67458b2"><td id="KCrh" class="">先生</td><td id="EDKk" class="">せんせい</td><td id="jJFV" class="">guru</td></tr><tr id="20e42145-0d42-80f3-ad11-f90e1d974867"><td id="KCrh" class="">学生</td><td id="EDKk" class="">がくせい</td><td id="jJFV" class="">murid / mahasiswa</td></tr><tr id="20e42145-0d42-802f-9ee1-db4562b1fd8a"><td id="KCrh" class="">毎日</td><td id="EDKk" class="">まいにち</td><td id="jJFV" class="">setiap hari</td></tr><tr id="20e42145-0d42-8034-8081-e3ccd079c212"><td id="KCrh" class="">書く</td><td id="EDKk" class="">かく</td><td id="jJFV" class="">menulis</td></tr><tr id="20e42145-0d42-8087-9dbc-ecec8c3bfd99"><td id="KCrh" class="">社員</td><td id="EDKk" class="">しゃいん</td><td id="jJFV" class="">karyawan</td></tr><tr id="20e42145-0d42-8084-98be-d69a15e211e3"><td id="KCrh" class="">残業</td><td id="EDKk" class="">ざんぎょう</td><td id="jJFV" class="">lembur</td></tr><tr id="20e42145-0d42-80d9-bf8f-ca364c5a1d26"><td id="KCrh" class="">父</td><td id="EDKk" class="">ちち</td><td id="jJFV" class="">ayah</td></tr><tr id="20e42145-0d42-805a-8885-c79c4af6847c"><td id="KCrh" class="">留学</td><td id="EDKk" class="">りゅうがく</td><td id="jJFV" class="">belajar ke luar negeri</td></tr><tr id="20e42145-0d42-803b-a30e-c1d2573d8f28"><td id="KCrh" class="">店長</td><td id="EDKk" class="">てんちょう</td><td id="jJFV" class="">manajer toko</td></tr><tr id="20e42145-0d42-8074-a86a-d2e6da65663f"><td id="KCrh" class="">配る</td><td id="EDKk" class="">くばる</td><td id="jJFV" class="">membagikan</td></tr><tr id="20e42145-0d42-80b7-9860-ee2e7bbdfe84"><td id="KCrh" class="">書類</td><td id="EDKk" class="">しょるい</td><td id="jJFV" class="">dokumen</td></tr><tr id="20e42145-0d42-8009-89f2-ffd795a6b646"><td id="KCrh" class="">話す</td><td id="EDKk" class="">はなす</td><td id="jJFV" class="">berbicara</td></tr><tr id="20e42145-0d42-8050-8ee1-f6809dde1248"><td id="KCrh" class="">写真</td><td id="EDKk" class="">しゃしん</td><td id="jJFV" class="">foto</td></tr><tr id="20e42145-0d42-80d4-9835-d3b3ddc041ab"><td id="KCrh" class="">撮る</td><td id="EDKk" class="">とる</td><td id="jJFV" class="">mengambil (foto)</td></tr><tr id="20e42145-0d42-8029-8c1e-d7311e73f7ba"><td id="KCrh" class="">弟</td><td id="EDKk" class="">おとうと</td><td id="jJFV" class="">adik laki-laki</td></tr><tr id="20e42145-0d42-8068-b9ac-f0623cb9d350"><td id="KCrh" class="">宿題</td><td id="EDKk" class="">しゅくだい</td><td id="jJFV" class="">PR (pekerjaan rumah)</td></tr></tbody></table></div></article><span class="sans" style="font-size:14px;padding-top:2em"><hr/><details open="" style="padding-top:1em"><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Inline comments</summary><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">部長</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">A</span></span><span><b>Adi Prasetya</b> <time style="font-size:0.8em">Jun 10, 2025, 6:19 PM</time></span></span></div><div style="padding:0.2em">(ぶちょう, buchou): &quot;Kepala departemen&quot; atau &quot;manajer&quot;.</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">大阪</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">A</span></span><span><b>Adi Prasetya</b> <time style="font-size:0.8em">Jun 10, 2025, 6:19 PM</time></span></span></div><div style="padding:0.2em">(おおさかへ, Oosaka e): &quot;Ke Osaka&quot; (partikel e menunjukkan tujuan pergerakan).</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">出張</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">A</span></span><span><b>Adi Prasetya</b> <time style="font-size:0.8em">Jun 10, 2025, 6:20 PM</time></span></span></div><div style="padding:0.2em">(しゅっちょう, shucchou): &quot;Perjalanan dinas&quot; atau &quot;tugas ke luar kota&quot;.</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">自由</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">A</span></span><span><b>Adi Prasetya</b> <time style="font-size:0.8em">Jun 10, 2025, 9:18 PM</time></span></span></div><div style="padding:0.2em">(じゆうに, jiyuu ni): &quot;Dengan bebas&quot; atau &quot;secara bebas&quot; (jiyuu berarti kebebasan, ni mengubahnya menjadi keterangan cara).</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">発表</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">A</span></span><span><b>Adi Prasetya</b> <time style="font-size:0.8em">Jun 10, 2025, 9:18 PM</time></span></span></div><div style="padding:0.2em">(はっぴょう, happyou): &quot;Presentasi&quot; atau &quot;pengumuman&quot;.</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">書類</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">A</span></span><span><b>Adi Prasetya</b> <time style="font-size:0.8em">Jun 10, 2025, 9:22 PM</time></span></span></div><div style="padding:0.2em">しょるい - dokumen</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">部長</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">A</span></span><span><b>Adi Prasetya</b> <time style="font-size:0.8em">Jun 10, 2025, 6:19 PM</time></span></span></div><div style="padding:0.2em">(ぶちょう, buchou): &quot;Kepala departemen&quot; atau &quot;manajer&quot;.</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">大阪</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">A</span></span><span><b>Adi Prasetya</b> <time style="font-size:0.8em">Jun 10, 2025, 6:19 PM</time></span></span></div><div style="padding:0.2em">(おおさかへ, Oosaka e): &quot;Ke Osaka&quot; (partikel e menunjukkan tujuan pergerakan).</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background">出張</mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><span class="icon text-icon user-icon"><span class="user-icon-inner">A</span></span><span><b>Adi Prasetya</b> <time style="font-size:0.8em">Jun 10, 2025, 6:20 PM</time></span></span></div><div style="padding:0.2em">(しゅっちょう, shucchou): &quot;Perjalanan dinas&quot; atau &quot;tugas ke luar kota&quot;.</div><div style="padding:0.3em"></div></li></ul></div><hr/></div></details></span></body></html>

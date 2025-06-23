@@ -1,0 +1,683 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Kondisi dan Penekanan</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1ed42145-0d42-8091-a6ea-fc0cb1228a76" class="page sans"><header><h1 class="page-title">Kondisi dan Penekanan</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Course</th><td><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Desc</th><td>BAB 25</td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date</th><td><time>@May 8, 2025</time></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesStatus"><path d="M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z"></path></svg></span>Status</th><td><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr></tbody></table></header><div class="page-body"><h1 id="1ed42145-0d42-8037-b4e3-e1c5aa5e930c" class="">Bab 25: Kondisi dan Penekanan - Minna no Nihongo</h1><h2 id="1ed42145-0d42-8081-9482-c82e05cde95f" class="">1. Plain past form ら、～</h2><ul id="1ed42145-0d42-80ff-97d1-f70d711cfd3c" class="bulleted-list"><li style="list-style-type:disc"><strong>Penjelasan</strong>: Bentuk lampau polos (plain past form) + ら menyatakan kondisi hipotetis yang bisa terjadi kapan saja, termasuk masa depan atau situasi umum, yang menyebabkan tindakan atau hasil tertentu. Pola ini menggunakan bentuk lampau untuk menunjukkan bahwa kondisi dianggap sebagai sesuatu yang sudah jelas atau pasti dalam konteks hipotetis.</li></ul><ul id="1ed42145-0d42-8019-8ad2-ca3edcbce08b" class="bulleted-list"><li style="list-style-type:disc"><strong>Kegunaan</strong>: Digunakan untuk menyatakan hubungan sebab-akibat atau respons terhadap kondisi yang mungkin terjadi, sering kali dengan implikasi tindakan di masa depan.</li></ul><ul id="1ed42145-0d42-8084-b079-f7f99b48a347" class="bulleted-list"><li style="list-style-type:disc"><strong>Contoh</strong>:<ul id="1ed42145-0d42-804a-aea0-ec9f6fccab1c" class="bulleted-list"><li style="list-style-type:circle">Sopan: 雨 が 降った ら、傘 を 持って 行きます。 (Jika hujan turun, saya akan membawa payung.)</li></ul><ul id="1ed42145-0d42-80ac-a189-cc851761e626" class="bulleted-list"><li style="list-style-type:circle">Biasa: 電車 が 遅れた ら、家 で 待つ。 (Jika kereta terlambat, saya akan menunggu di rumah.)</li></ul></li></ul><ul id="1ed42145-0d42-8092-b17a-e0a099c6fa40" class="bulleted-list"><li style="list-style-type:disc"><strong>Keterangan</strong>: Pola ini menekankan kondisi hipotetis yang bersifat umum atau potensial, bukan hanya masa lalu yang sudah terjadi. Sopan dengan ます, biasa tanpa tambahan.</li></ul><h2 id="1ed42145-0d42-8052-a3b0-e05e97cdbac2" class="">2. V た-form ら、～</h2><ul id="1ed42145-0d42-809c-90cb-e2aa2053b2ac" class="bulleted-list"><li style="list-style-type:disc"><strong>Penjelasan</strong>: V た-form + ら menyatakan kondisi yang terjadi setelah tindakan selesai, dengan implikasi bahwa tindakan tersebut pasti atau sudah terjadi.</li></ul><ul id="1ed42145-0d42-8011-85c9-ca84c9977c9d" class="bulleted-list"><li style="list-style-type:disc"><strong>Kegunaan</strong>: Menunjukkan konsekuensi alami atau logis setelah suatu tindakan dilakukan.</li></ul><ul id="1ed42145-0d42-8041-9391-c1f7ec4b9a30" class="bulleted-list"><li style="list-style-type:disc"><strong>Contoh</strong>:<ul id="1ed42145-0d42-80d8-8ab2-ff12ca5c8d0b" class="bulleted-list"><li style="list-style-type:circle">Sopan: ご飯 を 食べた ら、歯 を 磨きます。 (Setelah makan, saya akan menyikat gigi.)</li></ul><ul id="1ed42145-0d42-80b8-918b-ff5ed8755b97" class="bulleted-list"><li style="list-style-type:circle">Biasa: 仕事 を した ら、休む。 (Setelah bekerja, saya akan beristirahat.)</li></ul></li></ul><ul id="1ed42145-0d42-8071-b0c3-c63c373232f8" class="bulleted-list"><li style="list-style-type:disc"><strong>Keterangan</strong>: Fokus pada urutan tindakan, sopan dengan ます, biasa tanpa tambahan.</li></ul><h2 id="1ed42145-0d42-80fd-9571-f73237f04167" class="">3. V て-form</h2><ul id="1ed42145-0d42-8048-9685-e3281a8e746f" class="bulleted-list"><li style="list-style-type:disc">い-adj（～い）→ ～くて } も、～</li></ul><ul id="1ed42145-0d42-8074-af65-fb43412523b4" class="bulleted-list"><li style="list-style-type:disc">な-adj［な］→ で</li></ul><ul id="1ed42145-0d42-8010-9f93-eab92768597b" class="bulleted-list"><li style="list-style-type:disc">N で</li></ul><ul id="1ed42145-0d42-8078-9b0d-c7c7b9d6f9f7" class="bulleted-list"><li style="list-style-type:disc"><strong>Penjelasan</strong>:<ul id="1ed42145-0d42-8087-aa86-c16003d54ebb" class="bulleted-list"><li style="list-style-type:circle">V て-form, い-adj → ～くて, な-adj → で, atau N で + も menyatakan kondisi atau keadaan yang tetap berlaku meskipun ada hal tertentu.</li></ul><ul id="1ed42145-0d42-8076-b3bb-ccdfcba722b7" class="bulleted-list"><li style="list-style-type:circle">Pola ini menunjukkan kontras atau ketahanan terhadap kondisi.</li></ul></li></ul><ul id="1ed42145-0d42-80aa-85cd-e1a80dd47bf9" class="bulleted-list"><li style="list-style-type:disc"><strong>Kegunaan</strong>: Menyatakan bahwa tindakan atau keadaan tetap terjadi meskipun ada hambatan atau kondisi tertentu.</li></ul><ul id="1ed42145-0d42-803a-8f8c-dc45f0750991" class="bulleted-list"><li style="list-style-type:disc"><strong>Contoh</strong>:<ul id="1ed42145-0d42-805e-be3a-d4e61662581c" class="bulleted-list"><li style="list-style-type:circle">V て-form: 雨 が 降って も、公園 に 行きます。 (Meskipun hujan turun, saya akan pergi ke taman.)</li></ul><ul id="1ed42145-0d42-80c4-8fc1-fbf70b73a3bb" class="bulleted-list"><li style="list-style-type:circle">い-adj: 忙しくて も、毎日 勉強します。 (Meskipun sibuk, saya belajar setiap hari.)</li></ul><ul id="1ed42145-0d42-80c6-b233-db5a019c6c08" class="bulleted-list"><li style="list-style-type:circle">な-adj: 静か で も、音楽 を 聴きます。 (Meskipun suasananya tenang, saya mendengarkan musik.)</li></ul><ul id="1ed42145-0d42-806f-bff3-e924c5e4c484" class="bulleted-list"><li style="list-style-type:circle">N: 学生 で も、働きます。 (Meskipun saya pelajar, saya bekerja.)</li></ul></li></ul><ul id="1ed42145-0d42-80d7-bc74-d600aa19c7d4" class="bulleted-list"><li style="list-style-type:disc"><strong>Keterangan</strong>: も menunjukkan kontras, sopan dengan ます, biasa tanpa tambahan.</li></ul><h2 id="1ed42145-0d42-8069-9ba4-d3e126513116" class="">4. もし and いくら</h2><ul id="1ed42145-0d42-80bb-831e-faca40afccdb" class="bulleted-list"><li style="list-style-type:disc"><strong>Penjelasan</strong>:<ul id="1ed42145-0d42-8086-ba3d-d04b580912ed" class="bulleted-list"><li style="list-style-type:circle">もし digunakan untuk menyatakan kondisi hipotetis dengan nuansa formal atau hati-hati.</li></ul><ul id="1ed42145-0d42-8076-9070-f4d90f1916ca" class="bulleted-list"><li style="list-style-type:circle">いくら menyatakan kondisi berulang atau ekstrem yang tidak masuk akal.</li></ul></li></ul><ul id="1ed42145-0d42-80f3-8a80-d862d21c18f9" class="bulleted-list"><li style="list-style-type:disc"><strong>Kegunaan</strong>:<ul id="1ed42145-0d42-80da-aae8-fb508de8f9c5" class="bulleted-list"><li style="list-style-type:circle">もし untuk skenario &quot;jika&quot; dengan kemungkinan rendah.</li></ul><ul id="1ed42145-0d42-80b3-be23-ca31f0730e44" class="bulleted-list"><li style="list-style-type:circle">いくら untuk menekankan &quot;berapa pun&quot; atau &quot;seberapa pun&quot;.</li></ul></li></ul><ul id="1ed42145-0d42-8019-9ed0-dd6c724c08f7" class="bulleted-list"><li style="list-style-type:disc"><strong>Contoh</strong>:<ul id="1ed42145-0d42-8016-a423-f7f998f2f782" class="bulleted-list"><li style="list-style-type:circle">もし: もし 明日 雨 が 降ったら、旅行 を キャンセルします。 (Jika besok hujan turun, saya akan membatalkan perjalanan.)</li></ul><ul id="1ed42145-0d42-8064-8e94-cf6813863dfe" class="bulleted-list"><li style="list-style-type:circle">いくら: いくら 勉強しても、試験 に 合格できません。 (Seberapa banyak pun saya belajar, saya tidak bisa lulus ujian.)</li></ul></li></ul><ul id="1ed42145-0d42-8048-a345-ffade0926993" class="bulleted-list"><li style="list-style-type:disc"><strong>Keterangan</strong>: もし lebih formal, いくら menekankan ketidakmungkinan, keduanya bisa dipadukan dengan ます untuk sopan.</li></ul><h2 id="1ed42145-0d42-8023-b35b-e023bd6cb6fd" class="">5. N が</h2><ul id="1ed42145-0d42-8074-ad4a-e2ac29448cc1" class="bulleted-list"><li style="list-style-type:disc"><strong>Penjelasan</strong>: N が digunakan dalam klausa subordinat untuk menunjukkan subjek secara eksplisit, terutama ketika subjek berbeda dari klausa utama atau untuk memberikan penekanan pada subjek tersebut. Sesuai dengan pelajaran sebelumnya (Lesson 16, 4), penggunaan が dalam klausa subordinat menambahkan informasi subjek di samping partikel lain seperti は atau を, tergantung konteks.</li></ul><ul id="1ed42145-0d42-8073-8341-fb12c1c7736e" class="bulleted-list"><li style="list-style-type:disc"><strong>Kegunaan</strong>: Digunakan untuk menyoroti subjek dalam klausa subordinat, sering kali untuk membedakan subjek dari klausa utama atau menekankan siapa yang melakukan tindakan dalam kondisi tertentu.</li></ul><ul id="1ed42145-0d42-8006-b7d9-e4ab3d14ce81" class="bulleted-list"><li style="list-style-type:disc"><strong>Contoh</strong>:<ul id="1ed42145-0d42-803d-8926-dce85fdaf14b" class="bulleted-list"><li style="list-style-type:circle">(L. 18) Sopan: 友達 が 来る まえに、部屋 を 掃除します。 (Sebelum teman saya datang, saya membersihkan kamar.)</li></ul><ul id="1ed42145-0d42-8048-8d6d-cb6b297f354f" class="bulleted-list"><li style="list-style-type:circle">(L. 18) Biasa: 友達 が 来る まえに、部屋 を 掃除する。 (Sebelum teman saya datang, saya membersihkan kamar.)</li></ul><ul id="1ed42145-0d42-80a6-afaa-e9c20579cf83" class="bulleted-list"><li style="list-style-type:circle">(L. 23) Sopan: 妻 が 病気 の とき、休み を 取ります。 (Ketika istri saya sakit, saya mengambil hari libur.)</li></ul><ul id="1ed42145-0d42-8018-8408-eceef01305f7" class="bulleted-list"><li style="list-style-type:circle">(L. 23) Biasa: 妻 が 病気 の とき、休み を 取る。 (Ketika istri saya sakit, saya mengambil hari libur.)</li></ul><ul id="1ed42145-0d42-8024-b5c3-d7e0d1cf9da4" class="bulleted-list"><li style="list-style-type:circle">(L. 25) Sopan: 友達 が 時間 に 来なかった ら、どう しますか。 (Jika teman Anda tidak datang tepat waktu, apa yang akan Anda lakukan?)</li></ul><ul id="1ed42145-0d42-806d-8b6f-f58a3175bde3" class="bulleted-list"><li style="list-style-type:circle">(L. 25) Biasa: 友達 が 時間 に 来なかった ら、どう する。 (Jika teman Anda tidak datang tepat waktu, apa yang akan Anda lakukan?)</li></ul></li></ul><ul id="1ed42145-0d42-8008-a596-f166d086ee3f" class="bulleted-list"><li style="list-style-type:disc"><strong>Keterangan</strong>: が dalam klausa subordinat menekankan subjek yang berbeda dari klausa utama, sering digunakan untuk kontras atau informasi baru. Sopan dengan ます, biasa tanpa tambahan. Perhatikan bahwa が tetap digunakan meskipun subjek sudah jelas dari konteks, untuk menegaskan peran subjek dalam klausa tersebut.</li></ul><h2 id="1ed42145-0d42-80d2-a96d-d502fea22b4d" class="">Catatan Penting</h2><ul id="1ed42145-0d42-8000-b2da-e00847a7690a" class="bulleted-list"><li style="list-style-type:disc">N が dalam klausa subordinat menunjukkan subjek secara eksplisit, membedakannya dari penggunaan は yang lebih netral atau を yang menunjukkan objek.</li></ul><ul id="1ed42145-0d42-8039-8000-e77cb48b1160" class="bulleted-list"><li style="list-style-type:disc">Pola ini sering muncul dalam kalimat kompleks untuk menghubungkan kondisi atau waktu dengan tindakan utama, dengan penekanan pada subjek subordinat.</li></ul><h2 id="1ed42145-0d42-80d9-8687-f7b7ac5dbf93" class="">Catatan Penting</h2><ul id="1ed42145-0d42-806f-ac40-c97ba8c49d73" class="bulleted-list"><li style="list-style-type:disc">Plain past form ら menyatakan kondisi hipotetis yang bersifat umum atau potensial, sedangkan V た-form ら menunjukkan urutan tindakan yang sudah selesai.</li></ul><ul id="1ed42145-0d42-807b-946e-f57331a163ee" class="bulleted-list"><li style="list-style-type:disc">V て-form も, い-adj くて も, な-adj で も, N で も menunjukkan ketahanan terhadap kondisi.</li></ul><ul id="1ed42145-0d42-8082-8117-dd1cf1dc7d0a" class="bulleted-list"><li style="list-style-type:disc">もし untuk kondisi hipotetis, いくら untuk penekanan ekstrem.</li></ul><ul id="1ed42145-0d42-80f1-b3bc-f86f6adaeaa5" class="bulleted-list"><li style="list-style-type:disc">N が menekankan subjek, berbeda dengan は. Sopan dengan ます, biasa tanpa tambahan.</li></ul><h2 id="1ed42145-0d42-80be-8add-ccfc94165e60" class="">Note Kanji dan Artinya</h2><p id="1ed42145-0d42-80a5-bf99-d4f24fe457e9" class="">Berikut adalah daftar kanji yang muncul dalam contoh-contoh beserta artinya:</p><ul id="1ed42145-0d42-8088-9204-e2de24a21d20" class="bulleted-list"><li style="list-style-type:disc">雨 (あめ) - Hujan</li></ul><ul id="1ed42145-0d42-801a-9887-fa00a1327c4f" class="bulleted-list"><li style="list-style-type:disc">傘 (かさ) - Payung</li></ul><ul id="1ed42145-0d42-80f6-9ed4-c67ead3c0f24" class="bulleted-list"><li style="list-style-type:disc">持 (も)つ - Membawa</li></ul><ul id="1ed42145-0d42-80c6-ae32-c7c0fa2013b0" class="bulleted-list"><li style="list-style-type:disc">電車 (でんしゃ) - Kereta</li></ul><ul id="1ed42145-0d42-80fd-be23-c85637e02eab" class="bulleted-list"><li style="list-style-type:disc">遅 (おく)れる - Terlambat</li></ul><ul id="1ed42145-0d42-802e-8503-d08db9363dee" class="bulleted-list"><li style="list-style-type:disc">家 (いえ) - Rumah</li></ul><ul id="1ed42145-0d42-804f-8e3f-c5b9b0acf94d" class="bulleted-list"><li style="list-style-type:disc">待 (ま)つ - Menunggu</li></ul><ul id="1ed42145-0d42-806f-b0e0-c202508247e3" class="bulleted-list"><li style="list-style-type:disc">ご飯 (ごはん) - Nasi, makanan</li></ul><ul id="1ed42145-0d42-80a1-8e58-e32866b912f6" class="bulleted-list"><li style="list-style-type:disc">歯 (は) - Gigi</li></ul><ul id="1ed42145-0d42-803e-aad9-cc811a336dc4" class="bulleted-list"><li style="list-style-type:disc">磨 (みが)く - Menyikat</li></ul><ul id="1ed42145-0d42-801e-b558-c0453d7b7fbc" class="bulleted-list"><li style="list-style-type:disc">仕事 (しごと) - Pekerjaan</li></ul><ul id="1ed42145-0d42-8022-8ffb-fe81cdb328e2" class="bulleted-list"><li style="list-style-type:disc">休 (やす)む - Beristirahat</li></ul><ul id="1ed42145-0d42-80ad-963d-f7eea9b2bff4" class="bulleted-list"><li style="list-style-type:disc">公園 (こうえん) - Taman</li></ul><ul id="1ed42145-0d42-8008-9953-ee12dea1c854" class="bulleted-list"><li style="list-style-type:disc">行 (い)く - Pergi</li></ul><ul id="1ed42145-0d42-8084-818a-ef856c3e3ab9" class="bulleted-list"><li style="list-style-type:disc">忙 (いそが)しい - Sibuk</li></ul><ul id="1ed42145-0d42-8070-8cd9-f57ea444882b" class="bulleted-list"><li style="list-style-type:disc">毎日 (まいにち) - Setiap hari</li></ul><ul id="1ed42145-0d42-807a-b5c8-d5fc94ed25f0" class="bulleted-list"><li style="list-style-type:disc">勉強 (べんきょう) -合一Belajar</li></ul><ul id="1ed42145-0d42-80bd-86d6-de94d80046cb" class="bulleted-list"><li style="list-style-type:disc">静 (しず)か - Tenang</li></ul><ul id="1ed42145-0d42-8027-9305-f10c28d0dcc5" class="bulleted-list"><li style="list-style-type:disc">音楽 (おんがく) - Musik</li></ul><ul id="1ed42145-0d42-801b-8899-f2132f5a2846" class="bulleted-list"><li style="list-style-type:disc">聴 (き)く - Mendengarkan</li></ul><ul id="1ed42145-0d42-806c-860b-d0ef30396da3" class="bulleted-list"><li style="list-style-type:disc">学生 (がくせい) - Pelajar</li></ul><ul id="1ed42145-0d42-808e-bc6a-cd5c0b21666c" class="bulleted-list"><li style="list-style-type:disc">働 (はたら)く - Bekerja</li></ul><ul id="1ed42145-0d42-8075-ac5f-c1f21bfe3790" class="bulleted-list"><li style="list-style-type:disc">明日 (あした) - Besok</li></ul><ul id="1ed42145-0d42-8064-aead-dc8409dfcd4d" class="bulleted-list"><li style="list-style-type:disc">旅行 (りょこう) - Perjalanan</li></ul><ul id="1ed42145-0d42-805b-ba1c-c8525cecc30c" class="bulleted-list"><li style="list-style-type:disc">キャンセル (きゃんせる) - Membatalkan</li></ul><ul id="1ed42145-0d42-80fc-89f2-c9de33acd264" class="bulleted-list"><li style="list-style-type:disc">試験 (しけん) - Ujian</li></ul><ul id="1ed42145-0d42-80d4-9954-c8d7912aa631" class="bulleted-list"><li style="list-style-type:disc">合格 (ごうかく) - Lulus</li></ul><ul id="1ed42145-0d42-805f-ac76-fd8b7ee8ed2a" class="bulleted-list"><li style="list-style-type:disc">田中 (たなか) - Nama keluarga (Tanaka)</li></ul><ul id="1ed42145-0d42-8042-ac1b-ca41141cd25d" class="bulleted-list"><li style="list-style-type:disc">プレゼン (ぷれぜん) - Presentasi</li></ul><ul id="1ed42145-0d42-80a9-a648-c60b4b95db81" class="bulleted-list"><li style="list-style-type:disc">犬 (いぬ) - Anjing</li></ul><ul id="1ed42145-0d42-80b9-9cc8-f5cafa844f42" class="bulleted-list"><li style="list-style-type:disc">吠 (ほ)える - Menggonggong</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,683 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>DAFTAR ISI MATERI</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1e242145-0d42-801e-b3df-e8cc915250ad" class="page sans"><header><h1 class="page-title">DAFTAR ISI MATERI</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Course</th><td><span class="selected-value select-value-color-purple">Minna no Nihongo 1</span></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesStatus"><path d="M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z"></path></svg></span>Status</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Done</span></td></tr></tbody></table></header><div class="page-body"><h1 id="1f742145-0d42-8026-b023-f94dee71d4a6" class="">Daftar Isi Materi - Minna no Nihongo</h1><h2 id="1f742145-0d42-8029-8428-ca11714c220c" class="">Bab 1: Pengenalan Kalimat Dasar</h2><ul id="1f742145-0d42-807b-aa8d-f3052289db82" class="bulleted-list"><li style="list-style-type:disc">N1 は N2 です</li></ul><ul id="1f742145-0d42-807e-aeef-dd141a585828" class="bulleted-list"><li style="list-style-type:disc">N1 は N2 じゃありません</li></ul><ul id="1f742145-0d42-806b-9ed3-e8e9e2d535e7" class="bulleted-list"><li style="list-style-type:disc">S か</li></ul><ul id="1f742145-0d42-80c3-a51a-d97b200157b9" class="bulleted-list"><li style="list-style-type:disc">N です</li></ul><ul id="1f742145-0d42-80b4-9067-d8802701dd42" class="bulleted-list"><li style="list-style-type:disc">N1 の N2</li></ul><h2 id="1f742145-0d42-804f-ad1c-e9159142b718" class="">Bab 2: Kalimat Tanya dan Penunjuk</h2><ul id="1f742145-0d42-80cf-91e6-ceb864e93463" class="bulleted-list"><li style="list-style-type:disc">これ／それ／あれ</li></ul><ul id="1f742145-0d42-80b9-8dee-de577f56db5e" class="bulleted-list"><li style="list-style-type:disc">この N／その N／あの N</li></ul><ul id="1f742145-0d42-80b4-8b05-c0dea2dd8907" class="bulleted-list"><li style="list-style-type:disc">そうです／そうじゃありません</li></ul><ul id="1f742145-0d42-804f-80bc-ed89a4303b13" class="bulleted-list"><li style="list-style-type:disc">S1 か、S2 か</li></ul><ul id="1f742145-0d42-8074-8e51-c7ab6e717d67" class="bulleted-list"><li style="list-style-type:disc">N1 の N2 もそうです</li></ul><h2 id="1f742145-0d42-8073-befe-c13a5e32768a" class="">Bab 3: Kalimat dengan Kata Kerja</h2><ul id="1f742145-0d42-801f-80b7-fac3aed907ac" class="bulleted-list"><li style="list-style-type:disc">N (place) へ 行きます / 来ます / 帰ります</li></ul><ul id="1f742145-0d42-8099-9980-e1f78f47de7d" class="bulleted-list"><li style="list-style-type:disc">どこ へ 行きますか / 行きました</li></ul><ul id="1f742145-0d42-803c-92a9-deec1c15f0c2" class="bulleted-list"><li style="list-style-type:disc">N (vehicle) で 行きます / 来ます / 帰ります</li></ul><ul id="1f742145-0d42-8006-bf11-f420025abb34" class="bulleted-list"><li style="list-style-type:disc">N (person/animal) と V</li></ul><ul id="1f742145-0d42-8050-b068-efbb729ac115" class="bulleted-list"><li style="list-style-type:disc">いっしょに S ます</li></ul><h2 id="1f742145-0d42-807b-8a43-c4320a0b267e" class="">Bab 4: Waktu dan Aktivitas</h2><ul id="1f742145-0d42-8046-b675-d35c0efd324b" class="bulleted-list"><li style="list-style-type:disc">今 ～時 ～分 です</li></ul><ul id="1f742145-0d42-8057-84b6-e0a2c2a6e03a" class="bulleted-list"><li style="list-style-type:disc">V ます</li></ul><ul id="1f742145-0d42-800c-b020-c9636bdb33f7" class="bulleted-list"><li style="list-style-type:disc">V ますか / V ません / V ました / V ませんでした</li></ul><ul id="1f742145-0d42-805e-84e4-ee3bd7e87f94" class="bulleted-list"><li style="list-style-type:disc">N (time) に V</li></ul><ul id="1f742145-0d42-80f6-8702-c2285f2b8f94" class="bulleted-list"><li style="list-style-type:disc">N1 から N2 まで です</li></ul><ul id="1f742145-0d42-8007-9504-dac4997cbbea" class="bulleted-list"><li style="list-style-type:disc">N1 と N2 ね</li></ul><h2 id="1f742145-0d42-8044-9b82-eb6105b6c419" class="">Bab 5: Kata Penunjuk Tempat dan Keberadaan</h2><ul id="1f742145-0d42-809f-81be-e57f167d2725" class="bulleted-list"><li style="list-style-type:disc">ここ / そこ / あそこ / そちら / あちら</li></ul><ul id="1f742145-0d42-8072-b747-cc274e029267" class="bulleted-list"><li style="list-style-type:disc">N1 は N2 (place) です</li></ul><ul id="1f742145-0d42-8019-ac81-da6f9bfe87e9" class="bulleted-list"><li style="list-style-type:disc">どこ / どちら</li></ul><ul id="1f742145-0d42-80df-8b89-dab5c9ea044d" class="bulleted-list"><li style="list-style-type:disc">N1 の N2</li></ul><ul id="1f742145-0d42-80d6-a47d-faaec1aa2ef2" class="bulleted-list"><li style="list-style-type:disc">The ここ / そこ / あそこ System of Demonstrative Words</li></ul><ul id="1f742145-0d42-80fe-af7b-c708470d6873" class="bulleted-list"><li style="list-style-type:disc">はい、どうぞ</li></ul><h2 id="1f742145-0d42-801c-99f7-c5d98d24c146" class="">Bab 6: Kata Kerja Transitif dan Keberadaan</h2><ul id="1f742145-0d42-8087-8106-da27eefe1701" class="bulleted-list"><li style="list-style-type:disc">N を V (transitive)</li></ul><ul id="1f742145-0d42-80c0-bb37-d6c61096806e" class="bulleted-list"><li style="list-style-type:disc">N を します</li></ul><ul id="1f742145-0d42-80a0-8dc9-c5e9ee5b504b" class="bulleted-list"><li style="list-style-type:disc">何 を しますか</li></ul><ul id="1f742145-0d42-8026-ac0e-cc78b459226c" class="bulleted-list"><li style="list-style-type:disc">なん / なに</li></ul><ul id="1f742145-0d42-8080-b1e1-cf2635779bc6" class="bulleted-list"><li style="list-style-type:disc">N (place) で V</li></ul><ul id="1f742145-0d42-8062-ac87-c661d7abf3d2" class="bulleted-list"><li style="list-style-type:disc">V ませんか</li></ul><ul id="1f742145-0d42-807b-acc1-f1a35600283b" class="bulleted-list"><li style="list-style-type:disc">V ましょう</li></ul><ul id="1f742145-0d42-802d-9bb0-e201ac5b034d" class="bulleted-list"><li style="list-style-type:disc">もう</li></ul><h2 id="1f742145-0d42-8050-a65a-f3dd5fa64d5d" class="">Bab 7: Alat, Penerima, dan Keberadaan</h2><ul id="1f742145-0d42-80dc-853a-f9fa34e5681a" class="bulleted-list"><li style="list-style-type:disc">N (tool/means) で V</li></ul><ul id="1f742145-0d42-8055-bd4b-e429c2b9448c" class="bulleted-list"><li style="list-style-type:disc">“Word/Sentence” は ～語 で 何 ですか</li></ul><ul id="1f742145-0d42-80e3-920e-cc9d62bc8536" class="bulleted-list"><li style="list-style-type:disc">N (person) に あげます, etc.</li></ul><ul id="1f742145-0d42-804b-9a4a-c6c0339d8c16" class="bulleted-list"><li style="list-style-type:disc">N (person) に もらいます, etc.</li></ul><ul id="1f742145-0d42-8030-9206-e92a9cb95a84" class="bulleted-list"><li style="list-style-type:disc">もう V ました</li></ul><h2 id="1f742145-0d42-805e-bba1-e025e8389be2" class="">Bab 8: Kata Sifat dan Perbandingan</h2><ul id="1f742145-0d42-80e5-8b39-db6bf5ec68d4" class="bulleted-list"><li style="list-style-type:disc">Adjectives (い-adjective dan な-adjective)</li></ul><ul id="1f742145-0d42-80dd-9583-c6085b3fd005" class="bulleted-list"><li style="list-style-type:disc">N1 は い-adj です / N1 は い-adj(～くない) です</li></ul><ul id="1f742145-0d42-803a-bdc9-fbd13f0a647f" class="bulleted-list"><li style="list-style-type:disc">な-adj な N / い-adj N</li></ul><ul id="1f742145-0d42-8036-82bb-e9afaf288253" class="bulleted-list"><li style="list-style-type:disc">とても / あまり</li></ul><ul id="1f742145-0d42-808b-8f52-e2814ce520cd" class="bulleted-list"><li style="list-style-type:disc">N1 は どうですか</li></ul><ul id="1f742145-0d42-80dc-8960-e4b6ed560e43" class="bulleted-list"><li style="list-style-type:disc">N1 は どんな N2 ですか</li></ul><ul id="1f742145-0d42-801b-ac90-d599303693f8" class="bulleted-list"><li style="list-style-type:disc">S1 が、S2</li></ul><ul id="1f742145-0d42-80dc-8244-d56092129d8e" class="bulleted-list"><li style="list-style-type:disc">どれ</li></ul><h2 id="1f742145-0d42-8027-95d0-c65a8069e2d7" class="">Bab 9: Suka, Bisa, dan Keharusan</h2><ul id="1f742145-0d42-8043-92d4-d6eef5ad04f8" class="bulleted-list"><li style="list-style-type:disc">N が 好きです / 嫌いです / 上手です / 下手です</li></ul><ul id="1f742145-0d42-80e1-a839-cba47c651c59" class="bulleted-list"><li style="list-style-type:disc">どんな N</li></ul><ul id="1f742145-0d42-80d9-9011-e1c124e14186" class="bulleted-list"><li style="list-style-type:disc">上手 / たいへん / たくさん が あります / 全部</li></ul><ul id="1f742145-0d42-80aa-942b-d04c56422268" class="bulleted-list"><li style="list-style-type:disc">S1 から、S2</li></ul><ul id="1f742145-0d42-80ab-add8-c1fd8e207232" class="bulleted-list"><li style="list-style-type:disc">N が わかります</li></ul><ul id="1f742145-0d42-8062-bdb3-ce0fda160863" class="bulleted-list"><li style="list-style-type:disc">どうして S か</li></ul><h2 id="1f742145-0d42-802f-99f1-edeb40509bbe" class="">Bab 10: Keberadaan dan Posisi</h2><ul id="1f742145-0d42-800e-b029-ec5b06171a56" class="bulleted-list"><li style="list-style-type:disc">N が あります / います</li></ul><ul id="1f742145-0d42-80d3-b3df-c87f815eb9cc" class="bulleted-list"><li style="list-style-type:disc">N1 (place) に N2 が あります / います</li></ul><ul id="1f742145-0d42-80ff-9358-f4caf666e771" class="bulleted-list"><li style="list-style-type:disc">N1 は N2 (place) に あります / います</li></ul><ul id="1f742145-0d42-805f-8ee5-f0ba5b9f0cad" class="bulleted-list"><li style="list-style-type:disc">N1 (thing/person/place) の N2 (position)</li></ul><ul id="1f742145-0d42-8012-b33f-fc7a59ed2c68" class="bulleted-list"><li style="list-style-type:disc">N1 や N2</li></ul><ul id="1f742145-0d42-8005-9c15-e748744f630a" class="bulleted-list"><li style="list-style-type:disc">Word(s) でございます</li></ul><ul id="1f742145-0d42-8045-80da-fed46ae0f6ee" class="bulleted-list"><li style="list-style-type:disc">ディナーは あまり ません</li></ul><h2 id="1f742145-0d42-800a-ad79-e534933fbd42" class="">Bab 11: Penghitungan dan Durasi</h2><ul id="1f742145-0d42-807d-9c41-c3bd63c4e3e3" class="bulleted-list"><li style="list-style-type:disc">Saying Numbers</li></ul><ul id="1f742145-0d42-804e-b373-d09f162bc297" class="bulleted-list"><li style="list-style-type:disc">Quantifier (period) に 何回 V</li></ul><ul id="1f742145-0d42-80ed-bec7-dac0ac673450" class="bulleted-list"><li style="list-style-type:disc">Quantifier だけ / N だけ</li></ul><h2 id="1f742145-0d42-8058-8c38-e96ff4cd248b" class="">Bab 12: Bentuk Lampau dan Perbandingan dengan Kata Sifat</h2><ul id="1f742145-0d42-80aa-81f9-ec1752b3894b" class="bulleted-list"><li style="list-style-type:disc">Past Tense of Noun Sentence and な-adjective Sentence</li></ul><ul id="1f742145-0d42-802e-9254-f2a3bc2b8a1a" class="bulleted-list"><li style="list-style-type:disc">Past Tense of い-adjective Sentence</li></ul><ul id="1f742145-0d42-8015-a4b4-e85ae2af5a68" class="bulleted-list"><li style="list-style-type:disc">N1 は N2 より Adjective です</li></ul><ul id="1f742145-0d42-800e-b5ec-dc2bf7c3a7b3" class="bulleted-list"><li style="list-style-type:disc">N1 と N2 と どちら が Adjective ですか … N1/N2 のはう が Adjective です</li></ul><ul id="1f742145-0d42-80d1-ba9c-ca1fb96c8978" class="bulleted-list"><li style="list-style-type:disc">N1 の中で 何 / どこ / だれ が いちばん Adjective ですか</li></ul><h2 id="1f742145-0d42-80e5-98da-ece98cc43db8" class="">Bab 13: Keinginan dan Tindakan Berurutan</h2><ul id="1f742145-0d42-807f-b461-d440943f1957" class="bulleted-list"><li style="list-style-type:disc">N が 欲しいです</li></ul><ul id="1f742145-0d42-80c5-b95a-fe7a8d274f4b" class="bulleted-list"><li style="list-style-type:disc">V ます-form たいです</li></ul><ul id="1f742145-0d42-809b-91f8-fd6291012c41" class="bulleted-list"><li style="list-style-type:disc">N (place) へ [V ます-form] に 行きます / 来ます / 帰ります</li></ul><ul id="1f742145-0d42-8086-84b4-e58189854069" class="bulleted-list"><li style="list-style-type:disc">N1 に V / N を V</li></ul><ul id="1f742145-0d42-801b-a9e5-eecaf800ca59" class="bulleted-list"><li style="list-style-type:disc">どこか / 何か</li></ul><ul id="1f742145-0d42-8049-b7d1-d6f4e35bcf05" class="bulleted-list"><li style="list-style-type:disc">ごめんね</li></ul><h2 id="1f742145-0d42-807a-8077-c627fe54392a" class="">Bab 14: Permintaan dan Larangan</h2><ul id="1f742145-0d42-803c-8b9d-db9d99bac72d" class="bulleted-list"><li style="list-style-type:disc">V て-form ください</li></ul><ul id="1f742145-0d42-80df-87c0-d61535f1c912" class="bulleted-list"><li style="list-style-type:disc">V て-form はい</li></ul><ul id="1f742145-0d42-805f-abde-f2e6cc064281" class="bulleted-list"><li style="list-style-type:disc">V な / です ね</li></ul><ul id="1f742145-0d42-80f3-bfcd-d459b71135b6" class="bulleted-list"><li style="list-style-type:disc">V ない で ください</li></ul><ul id="1f742145-0d42-80fd-bf7d-ff6f8d3f9c5d" class="bulleted-list"><li style="list-style-type:disc">V ちゃ だめ です / V て は だめ です</li></ul><h2 id="1f742145-0d42-80c4-a9ed-d904b7ede6ff" class="">Bab 15: Tujuan dan Alasan</h2><ul id="1f742145-0d42-807c-ac6a-c4f575060ea4" class="bulleted-list"><li style="list-style-type:disc">N (place) に V に 行きます</li></ul><ul id="1f742145-0d42-80e9-89fe-c3b08df660e8" class="bulleted-list"><li style="list-style-type:disc">N1 を V て、N2 を V</li></ul><ul id="1f742145-0d42-80d0-9d1c-f7fd5876b2b8" class="bulleted-list"><li style="list-style-type:disc">N1 から N2 へ V</li></ul><ul id="1f742145-0d42-80af-833c-f83495d21ab3" class="bulleted-list"><li style="list-style-type:disc">なぜ S か</li></ul><ul id="1f742145-0d42-80ec-9cb4-e621c54ef880" class="bulleted-list"><li style="list-style-type:disc">そうですね</li></ul><h2 id="1f742145-0d42-8069-bde5-f56c615298cb" class="">Bab 16: Klausa Subordinat dan Penekanan</h2><ul id="1f742145-0d42-8027-9c13-e89ed3661b8c" class="bulleted-list"><li style="list-style-type:disc">N が V</li></ul><ul id="1f742145-0d42-8040-8410-ebd3feeef872" class="bulleted-list"><li style="list-style-type:disc">N1 の N2 が V</li></ul><ul id="1f742145-0d42-8071-ad7e-fcc54657a77b" class="bulleted-list"><li style="list-style-type:disc">N1 は N2 (place) に V</li></ul><ul id="1f742145-0d42-8068-8463-efb3865f2a7a" class="bulleted-list"><li style="list-style-type:disc">どれが / どこが / だれが</li></ul><ul id="1f742145-0d42-8058-abf4-daf0fe1afcd6" class="bulleted-list"><li style="list-style-type:disc">N1 から N2 に V</li></ul><h2 id="1f742145-0d42-80ec-8aba-fcef2ab36ecf" class="">Bab 17: Perbandingan dan Preferensi</h2><ul id="1f742145-0d42-8094-9fd1-c5f17d541c54" class="bulleted-list"><li style="list-style-type:disc">N1 は N2 より Adjective です</li></ul><ul id="1f742145-0d42-80f6-9e12-d39d97e90d12" class="bulleted-list"><li style="list-style-type:disc">N1 と N2 と どちら が Adjective ですか</li></ul><ul id="1f742145-0d42-806f-a6b6-c1c4776cd6b9" class="bulleted-list"><li style="list-style-type:disc">N が 好きです か / 嫌いです か</li></ul><ul id="1f742145-0d42-80a3-9241-cf61bf3f9fc9" class="bulleted-list"><li style="list-style-type:disc">N1 より N2 が Adjective です</li></ul><ul id="1f742145-0d42-8023-8ea2-d44a255814a8" class="bulleted-list"><li style="list-style-type:disc">N を V たいです</li></ul><h2 id="1f742145-0d42-80bb-960b-d90728cda780" class="">Bab 18: Waktu dan Keadaan</h2><ul id="1f742145-0d42-807f-93db-d28464531ce1" class="bulleted-list"><li style="list-style-type:disc">N (time) に V て-form から</li></ul><ul id="1f742145-0d42-801b-862e-c96e89194b16" class="bulleted-list"><li style="list-style-type:disc">N (time) まで V</li></ul><ul id="1f742145-0d42-80b4-a3d9-c186d3d5c3a4" class="bulleted-list"><li style="list-style-type:disc">N1 が V て、N2 が V</li></ul><ul id="1f742145-0d42-8047-948d-fa644e028b20" class="bulleted-list"><li style="list-style-type:disc">N1 を V て から、N2 を V</li></ul><ul id="1f742145-0d42-80f3-876e-c2319dd80fba" class="bulleted-list"><li style="list-style-type:disc">まだ V ていません</li></ul><h2 id="1f742145-0d42-800c-aacc-e9d25ab4ef27" class="">Bab 19: Kemampuan dan Pengalaman</h2><ul id="1f742145-0d42-8033-991b-de21323a591c" class="bulleted-list"><li style="list-style-type:disc">N が できます</li></ul><ul id="1f742145-0d42-801b-b06b-f0d3d04f21ae" class="bulleted-list"><li style="list-style-type:disc">N を V ました か</li></ul><ul id="1f742145-0d42-8012-91a3-edad4b96c64a" class="bulleted-list"><li style="list-style-type:disc">何 を V ました か</li></ul><ul id="1f742145-0d42-8028-a17f-cd16867f3d8a" class="bulleted-list"><li style="list-style-type:disc">N1 で N2 を V</li></ul><ul id="1f742145-0d42-8008-9476-ea3c44bae7be" class="bulleted-list"><li style="list-style-type:disc">いつ V ました か</li></ul><h2 id="1f742145-0d42-80a6-9829-ec2b0fd95c83" class="">Bab 20: Saran dan Rencana</h2><ul id="1f742145-0d42-8019-99fc-f7018e12bc61" class="bulleted-list"><li style="list-style-type:disc">V ましょうか</li></ul><ul id="1f742145-0d42-803e-8913-d6bd765bd453" class="bulleted-list"><li style="list-style-type:disc">N を V て みます</li></ul><ul id="1f742145-0d42-8045-aebf-ee321f2c9681" class="bulleted-list"><li style="list-style-type:disc">N (place) に V に 行きます</li></ul><ul id="1f742145-0d42-8058-8b1a-de1ccb5c3cb1" class="bulleted-list"><li style="list-style-type:disc">N1 と N2 と 一緒に V</li></ul><ul id="1f742145-0d42-8077-a3c9-ef6ee0499871" class="bulleted-list"><li style="list-style-type:disc">きっと S</li></ul><h2 id="1f742145-0d42-803c-be5b-f0b6ed801ff0" class="">Bab 21: Keadaan dan Perubahan</h2><ul id="1f742145-0d42-8072-af98-f563eb7890b2" class="bulleted-list"><li style="list-style-type:disc">V て-form います (keadaan berlangsung)</li></ul><ul id="1f742145-0d42-80d9-817f-dc134daaf2f5" class="bulleted-list"><li style="list-style-type:disc">N が 変わります</li></ul><ul id="1f742145-0d42-80f9-a3cd-d26b13bd6300" class="bulleted-list"><li style="list-style-type:disc">N1 から N2 へ 変わります</li></ul><ul id="1f742145-0d42-804b-9233-dcee9c247739" class="bulleted-list"><li style="list-style-type:disc">N を V て から 変わります</li></ul><ul id="1f742145-0d42-80a2-a9a7-fe32ba8b1c27" class="bulleted-list"><li style="list-style-type:disc">だんだん Adjective です</li></ul><h2 id="1f742145-0d42-80af-9314-f4e4b1be0ec5" class="">Bab 22: Hipotesis dan Dugaan</h2><ul id="1f742145-0d42-8014-8b2b-c3719654c516" class="bulleted-list"><li style="list-style-type:disc">N でしょう</li></ul><ul id="1f742145-0d42-80f3-98f0-c8f156eca594" class="bulleted-list"><li style="list-style-type:disc">V ましょう</li></ul><ul id="1f742145-0d42-80e8-8874-f9e63bd5036f" class="bulleted-list"><li style="list-style-type:disc">N が ある でしょう</li></ul><ul id="1f742145-0d42-8050-8a04-de300d9a11c2" class="bulleted-list"><li style="list-style-type:disc">V て-form いる でしょう</li></ul><ul id="1f742145-0d42-80eb-86f8-c8771bfbe2ee" class="bulleted-list"><li style="list-style-type:disc">きっと S でしょう</li></ul><h2 id="1f742145-0d42-8010-ad90-f96ee4762591" class="">Bab 23: Permintaan dan Penerimaan</h2><ul id="1f742145-0d42-8056-a887-c60f7611c66b" class="bulleted-list"><li style="list-style-type:disc">V て-form ください</li></ul><ul id="1f742145-0d42-8088-a1d2-e2dc5e12020f" class="bulleted-list"><li style="list-style-type:disc">N (person) に V て もらいます</li></ul><ul id="1f742145-0d42-802b-9ac7-cde720c6b162" class="bulleted-list"><li style="list-style-type:disc">N (person) に V て あげます</li></ul><ul id="1f742145-0d42-803b-a272-ffeca14cec61" class="bulleted-list"><li style="list-style-type:disc">N (person) に V て くれます</li></ul><ul id="1f742145-0d42-80d7-96f9-f342b92738df" class="bulleted-list"><li style="list-style-type:disc">N が V たら</li></ul><h2 id="1f742145-0d42-8051-8821-f040298842f2" class="">Bab 24: Permintaan dan Pemberian</h2><ul id="1f742145-0d42-80ba-98d2-e1806035db2f" class="bulleted-list"><li style="list-style-type:disc">V て-form くれます</li></ul><ul id="1f742145-0d42-8040-bcd0-f6314893172e" class="bulleted-list"><li style="list-style-type:disc">V て-form あげます / もらいます / くれます</li></ul><ul id="1f742145-0d42-804a-81b1-fc129693fb42" class="bulleted-list"><li style="list-style-type:disc">N (person) が V</li></ul><ul id="1f742145-0d42-8028-93fe-f2c60ef5bc42" class="bulleted-list"><li style="list-style-type:disc">Interrogative が V</li></ul><h2 id="1f742145-0d42-809a-a1cd-dba482a8732c" class="">Bab 25: Kondisi dan Penekanan</h2><ul id="1f742145-0d42-8000-8a93-dedb6fde1f38" class="bulleted-list"><li style="list-style-type:disc">Plain past form ら、～</li></ul><ul id="1f742145-0d42-80db-ba63-cf086e012023" class="bulleted-list"><li style="list-style-type:disc">V た-form ら、～</li></ul><ul id="1f742145-0d42-8036-8150-e723fbf4784c" class="bulleted-list"><li style="list-style-type:disc">V て-form</li></ul><ul id="1f742145-0d42-8018-841e-cb4ea9081856" class="bulleted-list"><li style="list-style-type:disc">い-adj（～い）→ ～くて } も、～</li></ul><ul id="1f742145-0d42-801b-adaa-c4a5438e03d4" class="bulleted-list"><li style="list-style-type:disc">な-adj［な］→ で</li></ul><ul id="1f742145-0d42-8044-9062-d8c851bbdd3f" class="bulleted-list"><li style="list-style-type:disc">N で</li></ul><ul id="1f742145-0d42-80e3-8ef5-da4037e609dd" class="bulleted-list"><li style="list-style-type:disc">もし and いくら</li></ul><ul id="1f742145-0d42-80bc-ba0a-ea178468d14a" class="bulleted-list"><li style="list-style-type:disc">N が</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

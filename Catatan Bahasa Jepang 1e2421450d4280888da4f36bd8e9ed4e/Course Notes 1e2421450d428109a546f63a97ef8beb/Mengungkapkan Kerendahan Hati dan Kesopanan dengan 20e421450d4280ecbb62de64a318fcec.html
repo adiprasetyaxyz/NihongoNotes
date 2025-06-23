@@ -1,0 +1,683 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Mengungkapkan Kerendahan Hati dan Kesopanan dengan 謙譲語 dan 丁寧語</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="20e42145-0d42-80ec-bb62-de64a318fcec" class="page sans"><header><h1 class="page-title"><strong>Mengungkapkan Kerendahan Hati dan Kesopanan dengan 謙譲語 dan 丁寧語</strong></h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-select"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Course</th><td><span class="selected-value select-value-color-pink">Minna no Nihongo 2</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Desc</th><td>BAB 50</td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(71, 70, 68, 0.6);flex-shrink:0" class="typesStatus"><path d="M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z"></path></svg></span>Status</th><td><span class="status-value"><div class="status-dot"></div>Not started</span></td></tr></tbody></table></header><div class="page-body"><h2 id="20e42145-0d42-8089-a561-ce4d3c359c35" class=""><strong>Bab 50: Mengungkapkan Kerendahan Hati dan Kesopanan dengan 謙譲語 dan 丁寧語</strong></h2><p id="20e42145-0d42-8099-aa7e-ddb5907e9d11" class=""><em>Minna no Nihongo Bab 50</em></p><hr id="20e42145-0d42-80d8-b4dd-f97dd3215be7"/><h3 id="20e42145-0d42-8019-a88e-f9901ecf2ca6" class=""><strong>1. 謙譲語（けんじょうご）– Humble Expressions</strong></h3><h3 id="20e42145-0d42-80e6-a13f-e7f02da91a6d" class=""><strong>Penjelasan:</strong></h3><p id="20e42145-0d42-80c0-8497-ff49c36576bd" class="">謙譲語 digunakan untuk merendahkan tindakan pembicara (atau kelompok pembicara) agar menunjukkan penghormatan terhadap orang lain. Biasanya digunakan saat:</p><ul id="20e42145-0d42-80c9-9d88-f416c0710013" class="bulleted-list"><li style="list-style-type:disc">Berbicara dengan orang yang lebih tinggi secara sosial (bos, pelanggan, guru, dll.)</li></ul><ul id="20e42145-0d42-8066-9cdf-ed145d99eead" class="bulleted-list"><li style="list-style-type:disc">Menceritakan tindakan yang melibatkan orang lain yang dihormati.</li></ul><h3 id="20e42145-0d42-80af-91ed-cfdaa942c3db" class=""><strong>Fungsi Gramatikal:</strong></h3><p id="20e42145-0d42-80c2-8d72-deecb4a4c31f" class="">Subjeknya selalu <strong>pembicara sendiri atau kelompoknya</strong>, dan objeknya adalah <strong>orang yang dihormati</strong>.</p><table id="20e42145-0d42-80f2-9b84-e8d9a67f8b4d" class="simple-table"><tbody><tr id="20e42145-0d42-8048-bb2f-cbfa2c9a46e0"><td id="{hEe" class="">Kata Kerja Biasa</td><td id="pSvO" class="">謙譲語</td></tr><tr id="20e42145-0d42-80e2-923e-e5d300de4db4"><td id="{hEe" class="">言います</td><td id="pSvO" class="">申します／申し上げます</td></tr><tr id="20e42145-0d42-804f-99b3-e1496a7024a9"><td id="{hEe" class="">行きます／来ます</td><td id="pSvO" class="">参ります</td></tr><tr id="20e42145-0d42-80c4-a405-d5a6a8d3484d"><td id="{hEe" class="">します</td><td id="pSvO" class="">いたします</td></tr><tr id="20e42145-0d42-8003-be0e-cc5a1fb82a8a"><td id="{hEe" class="">聞きます／訪ねます</td><td id="pSvO" class="">伺います</td></tr><tr id="20e42145-0d42-8029-86aa-fcc192f5b2b0"><td id="{hEe" class="">会います</td><td id="pSvO" class="">お目にかかります</td></tr><tr id="20e42145-0d42-80f8-a74d-c919e886e035"><td id="{hEe" class="">見ます</td><td id="pSvO" class="">拝見します</td></tr><tr id="20e42145-0d42-8099-94ed-e7307863b765"><td id="{hEe" class="">知っています</td><td id="pSvO" class="">存じております</td></tr><tr id="20e42145-0d42-8022-8043-f68955b38e4b"><td id="{hEe" class="">あげます</td><td id="pSvO" class="">差し上げます</td></tr></tbody></table><h3 id="20e42145-0d42-80da-ae6c-cb1674e167a7" class=""><strong>Kegunaan:</strong></h3><ul id="20e42145-0d42-8085-80e3-ea428c442322" class="bulleted-list"><li style="list-style-type:disc">Dalam percakapan bisnis (terutama ketika berbicara dengan pelanggan)</li></ul><ul id="20e42145-0d42-8071-a583-e9fa37867bff" class="bulleted-list"><li style="list-style-type:disc">Saat memperkenalkan diri</li></ul><ul id="20e42145-0d42-80b0-8aa2-c32881b6124f" class="bulleted-list"><li style="list-style-type:disc">Dalam email resmi atau pidato</li></ul><h3 id="20e42145-0d42-803c-9dc4-db7020a822c8" class=""><strong>Contoh Kalimat:</strong></h3><p id="20e42145-0d42-8009-9a6a-fd19a1207562" class=""><strong>1. 自己紹介 (perkenalan diri):</strong></p><p id="20e42145-0d42-80ad-856d-cb90d6d5e84f" class="">初めまして。山本と申します。どうぞ よろしくお願いいたします。</p><p id="20e42145-0d42-800f-81bb-d949b3109596" class=""><em>Salam kenal. Nama saya Yamamoto. Mohon kerja samanya.</em></p><p id="20e42145-0d42-8079-9d86-db2e4c7e8343" class=""><strong>2. Menyampaikan maksud:</strong></p><p id="20e42145-0d42-8082-ad30-f8798948d041" class="">社長に 会議のことを お伝えいたしました。</p><p id="20e42145-0d42-80fd-adf8-da9fa66e040c" class=""><em>Saya telah menyampaikan tentang rapat kepada direktur.</em></p><p id="20e42145-0d42-80a9-867f-e42852e6b0be" class=""><strong>3. Memberi sesuatu kepada orang dihormati:</strong></p><p id="20e42145-0d42-80cd-b13f-d7ea6c6fb1ed" class="">先生に この資料を 差し上げます。</p><p id="20e42145-0d42-8003-b5b5-f698b4229a0e" class=""><em>Saya memberikan dokumen ini kepada guru.</em></p><p id="20e42145-0d42-8089-98f5-ec4cffd92118" class=""><strong>4. Bertanya dengan sopan:</strong></p><p id="20e42145-0d42-80d6-888d-cb5117a9da56" class="">後で 部長のオフィスに 伺っても よろしいでしょうか。</p><p id="20e42145-0d42-80f6-8c34-d39cf12c0a33" class=""><em>Bolehkah saya datang ke kantor manajer nanti?</em></p><hr id="20e42145-0d42-80d9-ba41-e7ceeb392b85"/><h3 id="20e42145-0d42-807d-8c76-fc155f4ab2cc" class=""><strong>2. 丁寧語（ていねいご）– Polite Expressions</strong></h3><h3 id="20e42145-0d42-803a-b9bb-e79b663529ad" class=""><strong>Penjelasan:</strong></h3><p id="20e42145-0d42-80d6-a676-da468f89ee0a" class="">丁寧語 adalah bentuk sopan standar dalam bahasa Jepang. Dibentuk dengan menggunakan bentuk ～ます、～です、～ございます.</p><h3 id="20e42145-0d42-80ce-b8e2-ce447333c0f6" class=""><strong>Fungsi Gramatikal:</strong></h3><p id="20e42145-0d42-80ae-b4b2-f33d97440393" class="">Tidak mengubah struktur kata kerja secara signifikan, hanya mengubah akhiran agar terdengar sopan.</p><table id="20e42145-0d42-80c0-a9f7-e9ff71e206f4" class="simple-table"><tbody><tr id="20e42145-0d42-8099-995d-e391930ab1d2"><td id="KTRm" class="">Bentuk Biasa</td><td id="}@|K" class="">丁寧語</td></tr><tr id="20e42145-0d42-8057-ae89-e45fce3b2f41"><td id="KTRm" class="">ある</td><td id="}@|K" class="">ございます</td></tr><tr id="20e42145-0d42-809d-b4eb-e7afe0dbf704"><td id="KTRm" class="">です</td><td id="}@|K" class="">でございます</td></tr><tr id="20e42145-0d42-80a8-a2f3-eabe46d4aaa5"><td id="KTRm" class="">いる</td><td id="}@|K" class="">おります</td></tr><tr id="20e42145-0d42-80bd-bf20-f05ba8bef619"><td id="KTRm" class="">いく／くる</td><td id="}@|K" class="">まいります（*juga 謙譲語）</td></tr></tbody></table><h3 id="20e42145-0d42-80c2-903c-df6719f6e390" class=""><strong>Kegunaan:</strong></h3><ul id="20e42145-0d42-8088-816d-f467ac2a6d35" class="bulleted-list"><li style="list-style-type:disc">Dalam situasi sehari-hari yang sopan</li></ul><ul id="20e42145-0d42-80e1-bc82-c28841af590d" class="bulleted-list"><li style="list-style-type:disc">Saat berbicara dengan orang yang belum dikenal</li></ul><ul id="20e42145-0d42-8089-abbe-d8d4e38dee8f" class="bulleted-list"><li style="list-style-type:disc">Dalam pelayanan publik, pengumuman, dll.</li></ul><h3 id="20e42145-0d42-80cb-970d-f363d2cff570" class=""><strong>Contoh Kalimat:</strong></h3><p id="20e42145-0d42-80d4-af72-e0d200fbc1a7" class=""><strong>1. Pelayanan toko:</strong></p><p id="20e42145-0d42-809c-aca6-e82f77b7253f" class="">こちらが 新しいモデルでございます。</p><p id="20e42145-0d42-8038-ae26-e9acf7ed3522" class=""><em>Ini adalah model terbaru.</em></p><p id="20e42145-0d42-809a-a837-e15bab30a2b6" class=""><strong>2. Menyatakan keberadaan:</strong></p><p id="20e42145-0d42-8012-af5e-fa5bda778515" class="">私は 今 会議室に おります。</p><p id="20e42145-0d42-8048-a26e-c916db4b5607" class=""><em>Saya sekarang berada di ruang rapat.</em></p><p id="20e42145-0d42-80fa-a8d9-c22dfd4ab664" class=""><strong>3. Saat menelepon pelanggan:</strong></p><p id="20e42145-0d42-8056-9fd6-ff9669c06537" class="">田中と申しますが、鈴木様は いらっしゃいますか。</p><p id="20e42145-0d42-80de-85db-f6428dd577ea" class=""><em>Nama saya Tanaka, apakah Bapak Suzuki ada?</em></p><hr id="20e42145-0d42-80bf-aa39-d0464b7a2b30"/><h3 id="20e42145-0d42-8083-92ea-ec140a626afe" class=""><strong>Catatan tentang 謙譲語 dan 丁寧語:</strong></h3><table id="20e42145-0d42-8073-9bbd-ed3a9057496c" class="simple-table"><tbody><tr id="20e42145-0d42-806d-8490-db4ca4317d27"><td id="CWu@" class="">Poin</td><td id="Z[wX" class="">謙譲語 (Humble)</td><td id="N{MD" class="">丁寧語 (Polite)</td></tr><tr id="20e42145-0d42-8096-974f-d2d61c4ede87"><td id="CWu@" class="">Fokus</td><td id="Z[wX" class="">Merendahkan pembicara</td><td id="N{MD" class="">Membuat kalimat terdengar sopan</td></tr><tr id="20e42145-0d42-8087-a5ca-d13c7cef290d"><td id="CWu@" class="">Subjek</td><td id="Z[wX" class="">Pembicara atau kelompoknya</td><td id="N{MD" class="">Umum</td></tr><tr id="20e42145-0d42-8032-8897-efefa1efb7ac"><td id="CWu@" class="">Lawan Bicara</td><td id="Z[wX" class="">Orang yang dihormati</td><td id="N{MD" class="">Umum</td></tr><tr id="20e42145-0d42-80d1-871f-c31292856569"><td id="CWu@" class="">Kesan</td><td id="Z[wX" class="">Sangat formal, rendah hati</td><td id="N{MD" class="">Sopan</td></tr><tr id="20e42145-0d42-8022-9463-c11ab13ced92"><td id="CWu@" class="">Contoh umum</td><td id="Z[wX" class="">参ります、申します、伺います</td><td id="N{MD" class="">ございます、でございます</td></tr></tbody></table><hr id="20e42145-0d42-8054-be89-e4c95086ad04"/><h3 id="20e42145-0d42-806a-be67-e6c24d01067b" class=""><strong>Catatan Penting:</strong></h3><ul id="20e42145-0d42-80c9-892b-cc4267ba97e5" class="bulleted-list"><li style="list-style-type:disc">謙譲語 hanya digunakan ketika pembicara sendiri adalah pelaku.</li></ul><ul id="20e42145-0d42-80a4-8345-faf0440a00f0" class="bulleted-list"><li style="list-style-type:disc">Jangan salah menggunakan bentuk 謙譲語 untuk orang lain (itu justru merendahkan orang lain).</li></ul><ul id="20e42145-0d42-803e-ba8f-ec34cdbc9bde" class="bulleted-list"><li style="list-style-type:disc">丁寧語 aman digunakan dalam hampir semua konteks sopan.</li></ul><hr id="20e42145-0d42-805e-bd23-e874cd7d905d"/><h3 id="20e42145-0d42-80b7-b627-f416ab3f4e45" class=""><strong>Note Kanji dan Artinya:</strong></h3><table id="20e42145-0d42-80c6-9350-ca92a251db21" class="simple-table"><tbody><tr id="20e42145-0d42-801e-a343-c188f33f00da"><td id="v@NX" class="">Kanji</td><td id="z?G^" class="">Hiragana</td><td id="=@o}" class="">Arti</td></tr><tr id="20e42145-0d42-809b-a109-cde84e956fcc"><td id="v@NX" class="">謙譲語</td><td id="z?G^" class="">けんじょうご</td><td id="=@o}" class="">Bahasa merendahkan diri</td></tr><tr id="20e42145-0d42-80fb-a73a-e7f81fd0f9d6"><td id="v@NX" class="">丁寧語</td><td id="z?G^" class="">ていねいご</td><td id="=@o}" class="">Bahasa sopan</td></tr><tr id="20e42145-0d42-80f0-8894-d3336207bb25"><td id="v@NX" class="">社長</td><td id="z?G^" class="">しゃちょう</td><td id="=@o}" class="">Direktur</td></tr><tr id="20e42145-0d42-80dc-898b-df2048b5e780"><td id="v@NX" class="">会議</td><td id="z?G^" class="">かいぎ</td><td id="=@o}" class="">Rapat</td></tr><tr id="20e42145-0d42-80db-9366-e556317126a8"><td id="v@NX" class="">申します</td><td id="z?G^" class="">もうします</td><td id="=@o}" class="">Mengatakan (humble)</td></tr><tr id="20e42145-0d42-8012-84e6-d09a7183dab5"><td id="v@NX" class="">差し上げます</td><td id="z?G^" class="">さしあげます</td><td id="=@o}" class="">Memberikan (humble)</td></tr><tr id="20e42145-0d42-80d6-837b-febdaa521dea"><td id="v@NX" class="">拝見します</td><td id="z?G^" class="">はいけんします</td><td id="=@o}" class="">Melihat (humble)</td></tr><tr id="20e42145-0d42-80bd-9464-e6d8061f9a8f"><td id="v@NX" class="">存じております</td><td id="z?G^" class="">ぞんじております</td><td id="=@o}" class="">Mengetahui (humble)</td></tr><tr id="20e42145-0d42-806e-9175-cbdcc8399344"><td id="v@NX" class="">伺います</td><td id="z?G^" class="">うかがいます</td><td id="=@o}" class="">Mengunjungi/bertanya (humble)</td></tr><tr id="20e42145-0d42-8088-8378-dc5e8e0d92b4"><td id="v@NX" class="">お願い</td><td id="z?G^" class="">おねがい</td><td id="=@o}" class="">Permohonan, harapan</td></tr></tbody></table></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
